@@ -743,7 +743,7 @@ $h$表示噪声激励源到监测点之间的传递函数。
 信号调幅调制模型如\autoref{equ:tiaozhi}所示。
 \begin{equation}
     \label{equ:tiaozhi}
-    x\left ( t \right ) =\sum_{i=1}^{2}\left [ A_{i}\cos \left ( 2\pi f_{m,i}t  \right )\left ( B_{i}\cos\left ( 2\pi f_{c,i}t  \right )   \right )+D_{i}\cos\left ( 2\pi f_{n,i}t  \right )v\left ( t \right )      \right ]  
+    x\left ( t \right ) =\sum_{i=1}^{k}\left [ A_{i}\cos \left ( 2\pi f_{m,i}t  \right )\left ( B_{i}\cos\left ( 2\pi f_{c,i}t  \right )   \right )+D_{i}\cos\left ( 2\pi f_{n,i}t  \right )v\left ( t \right )      \right ]  
 \end{equation}
 
 式中，$A_i$为线谱载波的调制信号的幅值，$f_{m,i}$为调制信号的调制频率，$f_{c,i}$为线谱载波信号的载波频率，
@@ -755,33 +755,61 @@ $f_{n,i}$为随机平稳信号的调制信号的调制频率。
 式。
 基于推进泵噪声监测信号各组分的特点，该仿真信号的载波信号包含线谱载波、宽带载波三部分，
 与实际的推进泵调制信号特征相对应，本文所建立的仿真模型如\autoref{equ:fangzhen}所示。 
-
 \begin{equation}
     \label{equ:fangzhen}
     x\left ( t \right ) =\sum_{i=1}^{2}\left [ A_{i}\cos \left ( 2\pi f_{m,i}t  \right )\left ( B_{i}\cos\left ( 2\pi f_{c,i}t  \right )   \right )+D_{i}\cos\left ( 2\pi f_{n,i}t  \right )v\left ( t \right )      \right ]  
 \end{equation}
 
-式中，$f_{m,i}=17Hz,27Hz$表示线谱载波的调制信号频率，$f_{n,i}=37Hz,47Hz$表示宽带载波的调制信号频率，
-$f_{c,i}=1000Hz,2000Hz$表示线谱载波信号频率，$A_i$为线谱载波的调制信号的幅值。
-,
-500Hz,900Hz,1300Hzc j
-f  表示载波信
-号频率， p 3表示成分的个数，在本模型中n(t)表示噪声信号。
+式中，$f_{m,i}=$17Hz，27Hz表示线谱载波的调制信号频率，$f_{n,i}=$37Hz，47Hz表示宽带载波的调制信号频率，
+$f_{c,i}=$1000Hz，2000Hz表示线谱载波信号频率，$A_i=$1，1为线谱载波的调制信号的幅值，
+$B_i$=1，1为线谱载波信号的幅值，
+$D_i$=1，1为随机平稳信号的调制信号的幅值，
+$v\left ( t \right )$为随机平稳信号。
 
-式中，$A_i$为线谱载波的调制信号的幅值，$f_{m,i}$为调制信号的调制频率，$f_{c,i}$为线谱载波信号的载波频率，
-$B_i$为载波信号的幅值，$v\left ( t \right )$为随机平稳信号，$D_i$为随机平稳信号的调制信号的幅值，
-$f_{n,i}$为随机平稳信号的调制信号的调制频率。
-为了验证循环平稳解调算法提取多组分调制频率的有效性和良好的抗噪性能，。
-在信号模型中分别加入不同程度的高斯白噪声，其仿真信号的信噪比（Signal to Noise 
-Ratio，SNR）分别为0dB，-5dB，-10dB。 
+对该仿真信号进行二阶循环平稳统计量分析，代入\autoref{equ:erjie3}可推导出循环谱相干性的理论值。
+由分析结果可知，
+该仿真信号的循环相干谱当循环频率等于以下四种情况的时候，循环相干谱出现非零值：
+（1）当$\alpha=0$时，循环密度谱则退化成为一般的功率谱密度；
+（2）调制频率；
+（3）调制频率的谐频；
+（4）干涉频率。
 
-
-对该\autoref{equ:erjie3}
-当循环频率等于以下四种情况的时候，循环密度谱出现非零值：
-（1）当时，循环密度谱则遐化为一般的功率谱密度；
-（2）调制频率的谐频；
-（3）干涉频率。因此，当一个存在多调制信号的幅值调制信号经过循环密度谱处理
+因此，当一个存在多调制信号的幅值调制信号经过循环密度谱处理
 后，除了得到想要的调制频率之外，其调制频率的谐频以及其干涉频率均会出现。
+但是调制频率处的幅值会高于其谐频和干涉频率成分处的幅值，可通过这一特点对循环相干性谱图中出现的
+若干特征线谱中区分出调制频率。
+对于该仿真信号来说，其循环相干性谱图上除了出现四个调制频率（17Hz，27Hz，37Hz，47Hz）的线谱，
+还会出现这四个调制频率的谐频成分，以及宽带载波的调制频率（17Hz，27Hz）的干涉频率（10Hz，44Hz等）。
+
+为了验证循环平稳解调算法提取多组分调制频率的有效性和良好的抗噪性能，
+在信号模型中分别加入不同程度的高斯白噪声，其仿真信号的信噪比（Signal to Noise 
+Ratio，SNR）分别为0dB，-5dB，-10dB。由于循环谱相干性能表示调制信号的调制强度影响，
+因此本文以循环谱相干性的结果讨论为主。
+不同信噪比的仿真信号的循环谱相干性分析结果如\autoref{fig:db0}、\autoref{fig:db-5}和\autoref{fig:db-10}所示。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=1]{db0.png}
+    \caption{\label{fig:db0}SNR=0dB循环平稳解调分析结果}
+\end{figure}
+当 SNR=0dB时，原始信号中包含的宽带调制信号组分和高斯白噪声信号组成的噪声
+组分较多，信号的信噪比较低。在循
+环谱相干性图上将会产生四条特征谱线
+
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=1]{db-5.png}
+    \caption{\label{fig:db-5}SNR=-5dB循环平稳解调分析结果}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=1]{db-10.png}
+    \caption{\label{fig:db-10}SNR=-10dB循环平稳解调分析结果}
+\end{figure}
+
+
+
 
 
 \section{本章小结}
@@ -856,18 +884,6 @@ CFD数值计算结果与试验结果对比如图5所示，CFD仿真结果与实�
 导叶与导管四个部件上轴向非定常力计算采用定长计算得到的结果
 作为初始值以增强收敛性，并且每个非定常计算过程包含叶轮运转20圈的结果，
 前3圈的数据由于计算还没有完全收敛而没有在进一步的分析中采用。
-\subsection{试验结果与分析}
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[scale=1]{untitled.png}
-    \caption{\label{fig:signal_modle}推进泵噪声信号模型}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[scale=1]{untitled.eps}
-    \caption{\label{fig:signal_modle}推进泵噪声信号模型}
-\end{figure}
 \subsection{仿真结果与分析}
 \section{双级推进泵流致激励源特征提取和分析}
 \subsection{数值模型及计算方法}
