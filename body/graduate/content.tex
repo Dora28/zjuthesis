@@ -776,42 +776,75 @@ $v\left ( t \right )$为随机平稳信号。
 
 因此，当一个存在多调制信号的幅值调制信号经过循环密度谱处理
 后，除了得到想要的调制频率之外，其调制频率的谐频以及其干涉频率均会出现。
-但是调制频率处的幅值会高于其谐频和干涉频率成分处的幅值，可通过这一特点对循环相干性谱图中出现的
+但是调制频率处的幅值会高于其谐频和干涉频率成分处的幅值，可通过这一特点从循环相干性谱图中出现的
 若干特征线谱中区分出调制频率。
 对于该仿真信号来说，其循环相干性谱图上除了出现四个调制频率（17Hz，27Hz，37Hz，47Hz）的线谱，
-还会出现这四个调制频率的谐频成分，以及宽带载波的调制频率（17Hz，27Hz）的干涉频率（10Hz，44Hz等）。
+还会出现这四个调制频率的谐频成分，以及调制频率的干涉频率（10Hz，44Hz等）。
 
 为了验证循环平稳解调算法提取多组分调制频率的有效性和良好的抗噪性能，
 在信号模型中分别加入不同程度的高斯白噪声，其仿真信号的信噪比（Signal to Noise 
 Ratio，SNR）分别为0dB，-5dB，-10dB。由于循环谱相干性能表示调制信号的调制强度影响，
 因此本文以循环谱相干性的结果讨论为主。
-不同信噪比的仿真信号的循环谱相干性分析结果如\autoref{fig:db0}、\autoref{fig:db-5}和\autoref{fig:db-10}所示。
+仿真信号的循环谱相干性采用一种快速算法计算，信号的采样
+频率设置为1000Hz。
+不同信噪比的仿真信号的循环谱相干性分析结果如\autoref{fig:db0}、\autoref{fig:db-5}
+和\autoref{fig:db-10}所示。
+
+当 SNR=0dB时，循环平稳算法能很好的表征调制特征频率。如\autoref{fig:db0}所示，在循环谱相干性图上出现若干条特征谱线，
+包括四个调制频率（17Hz，27Hz，37Hz，47Hz）的谱线，
+四个调制频率的谐频成分（34Hz，54Hz，74Hz，94Hz等），以及调制频率的干涉频率10Hz和44Hz等。
+其中调制频率处的平均相干系数幅值均大于其谐频和干涉频率成分处的循环相干系数。
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1]{db0.png}
+    \includegraphics[scale=1]{origindb01.png}
     \caption{\label{fig:db0}SNR=0dB循环平稳解调分析结果}
 \end{figure}
-当 SNR=0dB时，原始信号中包含的宽带调制信号组分和高斯白噪声信号组成的噪声
-组分较多，信号的信噪比较低。在循
-环谱相干性图上将会产生四条特征谱线
 
+当SNR=-5dB时，原始信号中包含的宽带调制信号组分和高斯白噪声信号组成的噪声
+组分较多，信号的信噪比较低。如\autoref{fig:db-5}所示，在循环谱相干性图上出现若干条特征谱线，
+通过特征频率处的幅值大小可以判断出调制频率，
+此时循环平稳算法依然能够进行调制特征频率的表征。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=1]{origindb-5.png}
+    \caption{\label{fig:db-5}SNR= -5dB循环平稳解调分析结果}
+\end{figure}
+
+当SNR=-10dB时，原始信号中噪声成分非常高。当仿真信号的信噪比
+降低时，如\autoref{fig:db-10}所示，在循环谱相干性图上显著体现出四个调制频率的特征谱线，
+该方法依然可以获得比较好的解调效果，体现出较高的
+解调精度和抗噪性能。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=1]{origindb-10.png}
+    \caption{\label{fig:db-10}SNR= -10dB循环平稳解调分析结果}
+\end{figure}
+
+进了进一步验证信嗓比大小对仿真结果的影响。因此，在循环谱相干性的仿真测试中
+对比了不同信噪比对仿真结果的影响，如\autoref{equ:fangzhen1}所示。该仿真信号
+仍为一个幅值调制信号，只设置了一个调制信号，其相应的调制频率设为10Hz。
+根据理论预测，除了在调制频率处，在二阶谐频20Hz处也会产生非零的特征谱线。
+\begin{equation}
+    \label{equ:fangzhen1}
+    x\left ( t \right ) =\left ( 1+\cos \left ( 2\pi f_mt \right )  \right ) v\left ( t \right ) 
+\end{equation}
+
+式中$v\left ( t \right )$为随机平稳信号，$f_m$=10Hz为载波信号的调制频率。
+
+图\autoref{fig:SNR}对比了在这两个非零特征谱的平均相干系数在不同信噪比下的结果，可见
+平均相干系数会随着信噪比的减小而衰减。然而，信噪比并不影响判断两个非零特征
+谱的相对大小。
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1]{db-5.png}
-    \caption{\label{fig:db-5}SNR=-5dB循环平稳解调分析结果}
+    \includegraphics[scale=1]{4仿真信噪比.png}
+    \caption{\label{fig:SNR}信噪比对平均相干系数的影响
+    }
 \end{figure}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[scale=1]{db-10.png}
-    \caption{\label{fig:db-10}SNR=-10dB循环平稳解调分析结果}
-\end{figure}
-
-
-
-
-
+综上，通过多组分调制信号和载波信号的解调仿真实验，
+验证了循环平稳算法能识别宽带载波和线谱载波的多组分调制频带，
+表现出较高的解调精度和抗噪性能。
 \section{本章小结}
 
 
