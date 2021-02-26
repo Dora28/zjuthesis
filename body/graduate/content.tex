@@ -517,7 +517,7 @@ $\eta _{0}$表示效率。
 
 本实验中利用水听器阵列进行推进泵辐射噪声的采集，其固定实验装置如\autoref{fig:djstq}所
 示，加工好的木板在水舱中与水洞侧壁面平行放置，水听器垂直置于木板孔中，
-图上标号表示的水听器的安放位置。
+图上标号表示水听器的安放位置。
 利用水听器的空间位置布置，能够有效的进行推进泵在不同位置上的噪声采集。基于噪声测试系统
 对上述位置的噪声信号进行同步采集，采样频率为40960Hz，每次测试采样时间为10s。
 \begin{figure}[htbp]
@@ -541,22 +541,22 @@ $\eta _{0}$表示效率。
 段的噪声划分为中频噪声。
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1]{3dj倍频程2.png}
+    \includegraphics[scale=1]{3dj2_otc.png}
     \caption{\label{fig:djotc1}单级推进泵噪声1/3倍频程分析（1号传感器）}
 \end{figure}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1]{3dj倍频程3.png}
+    \includegraphics[scale=1]{3dj3_otc.png}
     \caption{\label{fig:djotc2}单级推进泵噪声1/3倍频程分析（2号传感器）}
 \end{figure}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1]{3dj倍频程6.png}
+    \includegraphics[scale=1]{3dj6_otc.png}
     \caption{\label{fig:djotc3}单级推进泵噪声1/3倍频程分析（3号传感器）}
 \end{figure}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1]{3dj倍频程7.png}
+    \includegraphics[scale=1]{3dj7_otc.png}
     \caption{\label{fig:djotc4}单级推进泵噪声1/3倍频程分析（4号传感器）}
 \end{figure}
 
@@ -603,6 +603,11 @@ $\eta _{0}$表示效率。
         \caption{\label{fig:dj_modle}不同进速系数下单级推进泵水下噪声三分之一倍频程图}
 \end{figure}
 \end{comment}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=1]{3单级总声压.png}
+    \caption{\label{fig:djtotal}单级推进泵噪声在不同进速系数下各个频段的噪声总声压级}
+\end{figure}
 
 为了进一步评估水速对推进泵特征频段的影响以及各个特征频段对噪声总级的贡献度，
 基于噪声测试系统中的数据分析模块，可获得各测点平均以后，推进泵噪声在低频段（10-100Hz），
@@ -612,18 +617,10 @@ $\eta _{0}$表示效率。
 还对全频段的声压级有增强作用。
 其中，进速系数的变化对低频段（10-100Hz）和高频段（1000-10000Hz）的总声压级影响较小，当水速从1.26m/s增大到
 5.05m/s时，低频段（10-100Hz）和高频段（1000-10000Hz）的总声压级的增幅分别为3.1dB和2.0dB。
-而进速系数对中频段（100-1000Hz）的总声压级影响更为显著，当水速从1.26m/s增大到5.05m/s时，
+水速对中频段（100-1000Hz）的总声压级影响更为显著，当水速从1.26m/s增大到5.05m/s时，
 中频段（100-1000Hz）的总声压级增幅达到12.2dB。
 不同进速系数下中频段（100-1000Hz）、中低频段（10-1000Hz）和全频段（10-10000Hz）的变化曲线几乎重合，
 这说明中低频段噪声构成了推进泵噪声最主要的贡献量。
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[scale=1]{3单级总声压.png}
-    \caption{\label{fig:djtotal}单级推进泵噪声在不同进速系数下各个频段的噪声总声压级}
-\end{figure}
-
-试验结果中对频率作了无量纲化处理,，即采用轴系转速进行无量纲化($f/f_n$)，
-随机选取了2号测点进行频谱特征分析。
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3sj0.4频谱.png}
@@ -650,12 +647,21 @@ $\eta _{0}$表示效率。
     \caption{\label{fig:jisuanyuwangge}J=1.2进速系数下单级推进泵噪声频谱}
 \end{figure}
 
+试验结果中对频率作了无量纲化处理,，即采用轴系转速进行无量纲化($f/f_n$)，
+随机选取了2号测点进行频谱特征分析。
+
 \section{双级推进泵噪声特性的试验研究}
 \subsection{推进泵试验模型}
 本小节的研究对象是一种新型结构推进泵，该泵引入多级泵的设计思路，采用一根轴驱动两个叶轮，
 再通过中间的导叶来回收环量。该双级推进泵通过采用特殊的两级叶轮形式降低推进器转速，提高能量密度。
-其设计参数与上小节的单级推进泵一样都是根据某航行体的推进需求计算，并进行缩尺得到。
-在单级推进泵的设计基础上，最终确定双级推进泵的轮缘直径也为200mm。
+其设计参数与上小节的单级推进泵都是根据某航行体的推进需求计算，并进行缩尺得到。
+在单级推进泵的设计基础上，最终确定双级推进泵的轮缘直径也为200mm，其直径空间与单级推进泵一致。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=1.0]{5双级整体结构.png}
+    \caption{\label{fig:sj_modle}双级推进泵设计模型}
+\end{figure}
+
 导管的设计选用 33 号减速喷管，可在一定程度上降低入流速度充分提升叶轮
 的抗空化性能，并根据动量定理确定导管得出口直径，保证推进器能产生足够的推力。
 叶轮的设计主要考虑了以下几个方面：
@@ -663,13 +669,6 @@ $\eta _{0}$表示效率。
 （2）采用了较大的叶片落后角，可以使叶片在有限的轴向长度内具有更大的做功能力，以充分提升双级泵喷推进器的能量密度；
 （3）中间导叶采用C型设计，可以有效地回收利用前叶轮出口的切向速度，并为后转子提供预旋，减小甚至消除推进系统出口的环量，以提高推进器的效率。
 双级推进泵设计模型如\autoref{fig:sj_modle}所示。
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[scale=1.0]{5双级整体结构.png}
-    \caption{\label{fig:sj_modle}双级推进泵设计模型}
-\end{figure}
-
-双级推进泵的设计参数如\autoref{tab:sj}所示。
 \begin{table}[htbp]
     \centering
     \caption{\label{tab:sj}双级推进泵设计参数}
@@ -691,81 +690,105 @@ $\eta _{0}$表示效率。
     \end{tabular}
 \end{table}
 
+双级推进泵的设计参数如\autoref{tab:sj}所示。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.25]{3双级试验模型.png}
+    \caption{\label{fig:sj_test}双级推进泵试验模型}
+\end{figure}
 推进器整体外形为流线型筒体，两级叶轮和导叶均装于筒体内。推进器前后两级叶轮位于导叶两侧，导叶体起到导流与支撑作用。
 推进器叶轮采用铝合金加工制造，表面做阳极化处理。导管选用有机玻璃材质，表面做抛光处理，导管内壁与转叶叶梢间隙约1mm。
 双级推进泵试验模型如\autoref{fig:sj_test}所示。
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[scale=0.2]{3双级试验模型.png}
-    \caption{\label{fig:sj_test}双级推进泵试验模型}
-\end{figure}
-
-推进器敞水性能曲线如\autoref{fig:sj_changshui}所示。与单级推进泵相比，
-双级推进泵的特性曲线变化更加平缓，这就使其高效区域更宽，
-并且在高进速系数时仍可以保持较高效率，说明双级推进器在有限的直径空间内提高了能量密度，
-适用于负荷较重的水面、水下航行器。
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3双级敞水性能.png}
     \caption{\label{fig:sj_changshui}双级推进泵敞水性能曲线}
 \end{figure}
 
+将水洞试验测得的双级推进泵推力、转矩和效率等数据无量纲化后，得到如\autoref{fig:chanshuiquxian}所
+示的敞水性能曲线。从图中可以看出：随着进速系数J的增大，
+推力系数$K_T$和转矩系数$K_Q$逐渐减小，而推进效率$\eta_0$先增大后减小，
+并在 J=1.35 处有最大值 62.7\%。与常见的螺旋桨敞水性能
+曲线相比，双级推进泵的敞水性能曲线随进速系数增加时变化趋势平缓，具有较高推进
+效率的同时也有较宽的高效工作区。
+推进器敞水性能曲线如\autoref{fig:sj_changshui}所示。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=1]{3单双级敞水性能对比.png}
+    \caption{\label{fig:sj_dj}双级推进泵与单级推进泵敞水性能曲线对比}
+\end{figure}
 
+与上小节研究的那台单级推进泵相比，在相同的直径空间下，双级推进泵的推力和转矩基本上相当于两台普通单级推进器。
+此外，可以看到，单级推进泵的效率性能曲线在J=1.2的时候效率就开始下降了，而双级推进泵的效率性能曲线到1.8才开始下降，
+双级推进泵的特性曲线变化更加平缓，这就使其高效区域更宽，
+并且在高进速系数时仍可以保持较高效率，
+说明双级推进器在高进速系数时仍可以保持较高效率，
+有限的直径空间内，双级推进泵在降低转速的同时也有效提高了能量密度，适用于负荷较重的水面、水下航行器。
+两种推进泵的敞水性能曲线对比如\autoref{fig:sj_dj}所示。
 
+在噪声试验方面，采用水听器型号依旧为丹麦 Reson TC4013，采集装置也和单级推进泵一致，
+利用水听器阵列进行推进泵辐射噪声的采集，其固定实验装置如\autoref{fig:sjstq}所示，
+加工好的木板在水舱中与水洞侧壁面平行放置，水听器垂直置于木板孔中，
+图上标号表示水听器的安放位置。基于噪声测试系统对上述位置的噪声信号进行同步采集，
+采样频率为40960Hz，每次测试采样时间为10s。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=1.0]{3单级水听器布置.png}
+    \caption{\label{fig:sjstq}单级推进泵噪声试验中水听器布置}
+\end{figure}
 \subsection{推进泵噪声特性分析}
+试验中通过固定叶轮转速、改变水洞流速的方法测量了进速系数0.3至1.8范围内，
+对应固定转速为16.66rps，水速从1.02m/s增加至6.01m/s范围内20个工况点下的
+水动力性能和噪声数据，本文选取进速系数分别为0.5，0.8，1.0，1.3和1.5，
+对应水速分别为1.68m/s，2.52m/s，3.32m/s，4.2m/s和5.05m/s工况下的噪声数据进行分析。
+基于噪声测试系统中的数据分析模块，获得了推进泵噪声的三分之一倍频程和频谱分析结果。
+本小节噪声范围的划分与单级推进泵保持一致，低频噪声的频率范围划分为100Hz以下，高频噪声在1000Hz以上，而低频与高频之间过渡频
+段的噪声划分为中频噪声。
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3sj倍频程3.png}
-    \caption{\label{fig:jisuanyuwangge}双级推进泵噪声1/3倍频程分析（1号传感器）}
+    \caption{\label{fig:sjotc1}双级推进泵噪声1/3倍频程分析（1号传感器）}
 \end{figure}
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3sj倍频程4.png}
-    \caption{\label{fig:jisuanyuwangge}双级推进泵噪声1/3倍频程分析（2号传感器）}
+    \caption{\label{fig:sjotc2}双级推进泵噪声1/3倍频程分析（2号传感器）}
 \end{figure}
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3sj倍频程5.png}
-    \caption{\label{fig:jisuanyuwangge}双级推进泵噪声1/3倍频程分析（3号传感器）}
+    \caption{\label{fig:sjotc3}双级推进泵噪声1/3倍频程分析（3号传感器）}
 \end{figure}
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3sj倍频程6.png}
-    \caption{\label{fig:jisuanyuwangge}双级推进泵噪声1/3倍频程分析（4号传感器）}
+    \caption{\label{fig:sjotc4}双级推进泵噪声1/3倍频程分析（4号传感器）}
 \end{figure}
 
-如\autoref{fig:djotc1}，\autoref{fig:djotc2}，\autoref{fig:djotc3}，\autoref{fig:djotc4}所示，
+如\autoref{fig:sjotc1}，\autoref{fig:sjotc2}，\autoref{fig:sjotc3}，\autoref{fig:sjotc4}所示，
 分别为不同位置水听器在不同进速系数工况下的推进泵噪声的三分之一倍频程图。
+随着推进系数的增大，即水速的变大对中低频段有较明显的影响，对高频频段的影响较小。
+水速的变化对中低频段的影响体现在整个中低频宽带的频段上，同时，
+水速的升高对中低频段的噪声有增强作用。
 从中可以发现，推进泵噪声能量主要集中在中低频段。
-随着推进系数的增大，即水速的变大对中低频段有较大的影响，对高频频段的影响较小。
-水速的变化对中低频段的影响体现在整个中低频宽带的频段上，而不是某个窄带特征频段。
-水速的升高对中低频段的噪声影响较为复杂，没有明显的规律。
-
-如\autoref{fig:djotc1}，\autoref{fig:djotc2}，\autoref{fig:djotc3}，\autoref{fig:djotc4}所示，
-分别为不同位置水听器在不同进速系数工况下的推进泵噪声的三分之一倍频程图。
-从中可以发现，推进泵噪声能量主要集中在中低频段。
-随着推进系数的增大，即水速的变大对中低频段有较大的影响，对高频频段的影响较小。
-水速的变化对中低频段的影响体现在整个中低频宽带的频段上，而不是某个窄带特征频段。
-水速的升高对中低频段的噪声影响较为复杂，没有明显的规律。
-
-了进一步评估水速对推进泵特征频段的影响以及各个特征频段对噪声总级的贡献度，
-基于噪声测试系统中的数据分析模块，可获得各测点平均以后，推进泵噪声在低频段（10-100Hz），
-中频段（100-1000Hz），高频段（1000-10000Hz），中低频段（10-1000Hz）和全频段（10-10000Hz）的总声压级。
-如\autoref{fig:djtotal}所示为推进泵噪声在不同进速系数下各个频段的噪声总声压级，
-从图中可以看出，随着进速系数的变大，各个频段的声压级单调递增，说明水速的增大不仅会提升低中高三个频段的噪声能量，
-还对全频段的声压级有增强作用。
-其中，进速系数的变化对低频段（10-100Hz）和高频段（1000-10000Hz）的总声压级影响较小，当水速从1.26m/s增大到
-5.05m/s时，低频段（10-100Hz）和高频段（1000-10000Hz）的总声压级的增幅分别为3.1dB和2.0dB。
-而进速系数对中频段（100-1000Hz）的总声压级影响更为显著，当水速从1.26m/s增大到5.05m/s时，
-中频段（100-1000Hz）的总声压级增幅达到12.2dB。
-不同进速系数下中频段（100-1000Hz）、中低频段（10-1000Hz）和全频段（10-10000Hz）的变化曲线几乎重合，
-这说明中低频段是推进泵噪声最主要的贡献量。
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3双级总声压级.png}
     \caption{\label{fig:djtotal}双级推进泵噪声在不同进速系数下各个频段的噪声总声压级}
 \end{figure}
 
+基于噪声测试系统中的数据分析模块，获得了各测点平均以后的推进泵噪声在低频段（10-100Hz），
+中频段（100-1000Hz），高频段（1000-10000Hz），中低频段（10-1000Hz）和全频段（10-10000Hz）的总声压级。
+如\autoref{fig:djtotal}所示为推进泵噪声在不同进速系数下各个频段的噪声总声压级，
+可以看出，不同进速系数下中频段（100-1000Hz）、中低频段（10-1000Hz）和全频段（10-10000Hz）的变化曲线几乎重合，
+这说明中低频段是推进泵噪声最主要的贡献量。
+从图中可以看出，随着进速系数的变大，各个频段的声压级单调递增，
+在水速变化的前半段，各频段的增长速率较为平缓，当水速达到3.4m/s以后，各频段的增长速率开始明显变大。
+其中，进速系数的变化对低频段（10-100Hz）和高频段（1000-10000Hz）的总声压级影响较小，当水速从1.26m/s增大到
+5.05m/s时，低频段（10-100Hz）和高频段（1000-10000Hz）的总声压级的增幅分别为8.4dB和9.1dB。
+而进速系数对中频段（100-1000Hz）的总声压级影响更为显著，当水速从1.26m/s增大到5.05m/s时，
+中频段（100-1000Hz）的总声压级增幅达到19.9dB。
+说明水速的增大不仅会提升低中高三个频段的噪声能量，还对全频段的声压级有增强作用。
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3sj0.5频谱.png}
@@ -994,7 +1017,9 @@ $h$表示噪声激励源到监测点之间的传递函数。
 最终使得调幅调制信号的特征调制频率保持稳定不变。
 
 推进泵的噪声情况是动叶、静叶和导管等构件与非均匀流场相互作用情况的综合结果，
-推进泵低频特征频率丰富，根据其特点将其构建成具有线谱载波和宽带载波，多组分调制频率的调幅调制信号。
+第三章推进泵噪声试验结果显示，监测到的推进泵噪声频谱特性表现为中低频线
+谱噪声，中低频宽带谱噪声和高频宽带谱噪声。
+根据其特点将其构建成具有线谱载波和宽带载波，多组分调制频率的调幅调制信号。
 信号调幅调制模型如\autoref{equ:tiaozhi}所示。
 \begin{equation}
     \label{equ:tiaozhi}
@@ -1142,14 +1167,14 @@ D为叶轮直径。计算域入口距离推进泵前缘5L，
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1.0]{4计算域网格.png}
-    \caption{\label{fig:djjisuanyuwangge}计算域体网格}
+    \includegraphics[scale=1.0]{4单级推进泵计算域网格.png}
+    \caption{\label{fig:djjisuanyuwangge}计算域网格}
 \end{figure}
 
 经过网格无关性验证后确定总网格量，各计算与网格数如\autoref{tab:djshuliang}所示。
 \begin{table}[htbp]
     \centering
-    \caption{\label{tab:djshuliang}各计算域网格数量}
+    \caption{\label{tab:djshuliang}单级推进泵各计算域网格数量}
     \begin{tabular}{ccccc}
         \toprule
         计算域 & 外流域 & 叶轮域 & 导叶域  & 网格总量 \\
@@ -1161,12 +1186,12 @@ D为叶轮直径。计算域入口距离推进泵前缘5L，
 
 双级推进泵的CFD数值计算采用的湍流模型为SST k-ω模型，压力速度耦合方式为SIMPLEC，
 压力项离散方式为二阶离散，动量项离散方式为二阶迎风格式，其他项均采用一阶迎风格式离散。
-CFD数值计算结果与试验结果对比如图5所示，CFD仿真结果与实验数据呈现了较好的一致性，
+CFD数值计算结果与试验结果对比如\autoref{fig:sj_monishiyan}所示，CFD仿真结果与实验数据呈现了较好的一致性，
 验证了计算结果的可靠性。
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=0.3]{4实验与CFD性能对比.png}
-    \caption{\label{fig:jisuanyuwangge}双级推进泵敞水性能试验与CFD模拟结果对比}
+    \includegraphics[scale=1]{5单级模拟试验对比.png}
+    \caption{\label{fig:sj_monishiyan}单级推进泵敞水性能试验与CFD模拟结果对比}
 \end{figure}
 
 
@@ -1243,8 +1268,8 @@ CFD数值计算结果与试验结果对比如图5所示，CFD仿真结果与实�
 验证了计算结果的可靠性。
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=0.4]{4实验与CFD性能对比.png}
-    \caption{\label{fig:jisuanyuwangge}双级推进泵敞水性能试验与CFD模拟结果对比}
+    \includegraphics[scale=1]{5双级模拟试验对比.png}
+    \caption{\label{fig:sj_monishiyan}双级推进泵敞水性能试验与CFD模拟结果对比}
 \end{figure}
 
 将水洞实验测得的双级吊舱推进器推力、转矩和效率等数据无量纲化后如图4所示。
