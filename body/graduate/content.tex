@@ -1,10 +1,6 @@
 \chapter{绪论}
 
 \section{研究背景及意义}
-推进泵作为一种椎进效率高、空化性能好、嗓声
-低的推进形式，已大量运用于各类高性能水下航行体和船舶，尤其在高速航行时相比螺
-旋桨其性能优势非常显著
-
 近年来，喷水推进泵在高速船舶推进系统中得到了广泛应用，
 随着动力传动系统与船体减振降噪技术的进步，推进泵噪声对舰船总体噪声的贡献度也被相对提高，
 因而目前高新船舶对高效低噪声推进泵的需求日益迫切。
@@ -1241,20 +1237,30 @@ CFD数值计算结果与试验结果对比如\autoref{fig:sj_monishiyan}所示�
 作为初始值以增强收敛性，并且每个非定常计算过程包含叶轮运转20圈的结果，
 前3圈的数据由于计算还没有完全收敛而没有在进一步的分析中采用。
 \subsection{仿真结果与分析}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=1]{5单级非定常激励力0.4.png}
+    \caption{\label{fig:jisuanyuwangge}J=0.4进速系数下单级推进泵轴向激励力频谱}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=1]{5单级非定常激励力0.79.png}
+    \caption{\label{fig:jisuanyuwangge}J=0.79进速系数下单级推进泵轴向激励力频谱}
+\end{figure}
 \subsection{试验结果与分析}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1]{dj0.4解调.png}
+    \includegraphics[scale=1]{dj0.4解调1.png}
     \caption{\label{fig:jisuanyuwangge}J=0.4进速系数下单级推进泵噪声循环平稳分析结果}
 \end{figure}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1]{dj0.79解调.png}
-    \caption{\label{fig:jisuanyuwangge}J=0.4进速系数下单级推进泵噪声循环平稳分析结果}
+    \includegraphics[scale=1]{dj0.79解调1.png}
+    \caption{\label{fig:jisuanyuwangge}J=0.79进速系数下单级推进泵噪声循环平稳分析结果}
 \end{figure}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1]{dj1.2解调.png}
+    \includegraphics[scale=1]{dj1.2解调1.png}
     \caption{\label{fig:jisuanyuwangge}J=1.2进速系数下单级推进泵噪声循环平稳分析结果}
 \end{figure}
 \section{双级推进泵流致激励源特征提取和分析}
@@ -1270,23 +1276,22 @@ D为叶轮直径。计算域入口距离推进泵前缘5L，
     \includegraphics[scale=1.3]{4推进泵计算域模型.png}
     \caption{\label{fig:jisuanyu}计算域及边界条件}
 \end{figure}
-
-根据双级推进泵的工作特点，将计算域分为：外流域、首级叶轮域、导叶域和次级叶轮域。
-两级叶轮所在的是旋转域，其余的为静止域，两相邻的计算域采用interface连接。
-外流域壁面和物面采用无滑移壁面条件。
-泵内、外计算域均采用六面体结构化网格.
-如\autoref{fig:sjwangge}、\autoref{fig:jisuanyuwangge}所示。
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1.2]{4表面网格.png}
     \caption{\label{fig:sjwangge}双级推进泵表面网格}
 \end{figure}
-
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1.0]{4计算域网格.png}
     \caption{\label{fig:jisuanyuwangge}计算域体网格}
 \end{figure}
+
+根据双级推进泵的工作特点，将计算域分为：外流域、首级叶轮域、导叶域和次级叶轮域。
+两级叶轮所在的是旋转域，其余的为静止域，两相邻的计算域采用interface连接。
+外流域壁面和物面采用无滑移壁面条件。
+泵内、外计算域均采用六面体结构化网格，
+如\autoref{fig:sjwangge}、\autoref{fig:jisuanyuwangge}所示为双级推进泵网格和计算域网格。
 
 经过网格无关性验证后确定总网格量，各计算与网格数如\autoref{tab:sjshuliang}所示。
 \begin{table}[htbp]
@@ -1303,18 +1308,16 @@ D为叶轮直径。计算域入口距离推进泵前缘5L，
 
 双级推进泵的CFD数值计算采用的湍流模型为SST k-ω模型，压力速度耦合方式为SIMPLEC，
 压力项离散方式为二阶离散，动量项离散方式为二阶迎风格式，其他项均采用一阶迎风格式离散。
-CFD数值计算结果与试验结果对比如图5所示，CFD仿真结果与实验数据呈现了较好的一致性，
-验证了计算结果的可靠性。
+CFD数值计算结果与试验结果对比如\autoref{fig:sj_monishiyan}所示，
+可以看出数值模拟得到的敞水特性曲线与实验结果吻合度较好，
+证实数值模拟不仅能够预报推进器总体的水动力特性，所采用的数值模拟方法具有较高精度。
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{5双级模拟试验对比.png}
     \caption{\label{fig:sj_monishiyan}双级推进泵敞水性能试验与CFD模拟结果对比}
 \end{figure}
 
-图4对比了数值模拟与水洞实验的结果，可以看出数值模拟得到的敞水特性曲线与实验结果吻合度较好，
-证实数值模拟不仅能够预报推进器总体的水动力特性，所采用的数值模拟方法具有较高精度。
-
-为获取推进泵的瞬态内流场分布与激励力、压力的脉动特性，
+为获取推进泵的流致激励力特性，
 本文开展了非定常计算。
 其中，非定常计算的时间步设为叶轮旋转一度所需的时间。
 导叶与导管四个部件上轴向非定常力计算采用定长计算得到的结果
@@ -1323,21 +1326,58 @@ CFD数值计算结果与试验结果对比如图5所示，CFD仿真结果与实�
 \subsection{试验结果与分析}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1]{5sjdb0.5解调.png}
+    \includegraphics[scale=1]{5sjdb0.5解调2.png}
     \caption{\label{fig:jisuanyuwangge}J=0.5进速系数下双级推进泵噪声循环平稳分析结果}
 \end{figure}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1]{5sjdb1.0解调.png}
+    \includegraphics[scale=1]{5sjdb1.0解调2.png}
     \caption{\label{fig:jisuanyuwangge}J=1.0进速系数下双级推进泵噪声循环平稳分析结果}
 \end{figure}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1]{5sjdb1.5解调.png}
+    \includegraphics[scale=1]{5sjdb1.5解调2.png}
     \caption{\label{fig:jisuanyuwangge}J=1.5进速系数下双级推进泵噪声循环平稳分析结果}
 \end{figure}
 
 \subsection{仿真结果与分析}
+本研究基于非定常CFD计算获得了以上典型试验工况下，双级推进泵的瞬态流场分布，以及前后叶轮、导叶与导管等四个部件上的轴向非定常力数据。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=1]{4J0.5非定常激振力1.png}
+    \caption{\label{fig:jisuanyuwangge}J=0.5进速系数下双级推进泵轴向激励力频谱}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=1]{4J1.0非定常激振力1.png}
+    \caption{\label{fig:jisuanyuwangge}J=1.0进速系数下双级推进泵轴向激励力频谱}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=1]{4J1.5非定常激振力1.png}
+    \caption{\label{fig:jisuanyuwangge}J=1.5进速系数下双级推进泵轴向激励力频谱}
+\end{figure}
+
+展示了三种工况下，双级推进泵前后叶轮、导叶与导管四个部件上轴向非定常力的频谱，图中非定常力脉动幅值。
+这三种工况下各部件轴向非定常力的频谱极为相似，并且在每个部件上均以导叶频率（177.8 Hz）占主导，
+说明激励力信号能量主要集中在导叶叶频附近，这与试验测得的噪声信号频谱特性十分吻合。
+同时，三种工况下各部件轴向非定常力的频谱中均未观测到明显的前、后叶频成分。
+通过对比不同进速系数工况下，双级推进泵各部位激励力中导叶叶频频率处的幅值与各部件上平均推力大小的比值发现，
+前后叶轮处的激励力叶频频率处的相对幅值分别达到了38\%和81\%，显著高于导叶4\%和导管的8\%，
+可以得出，相比导叶和导管等静部件，前、后叶轮上的轴向激励力脉动更为强烈，
+同时后置叶轮的脉动幅值大小也明显高于前置叶轮，约为前置叶轮的两倍。
+
+图10为各工况下的推进泵内压力分布，图中为压力系数，
+从压力分布云图可以看出导叶与叶轮的干涉作用十分显著，
+前置转子在受来流湍流激励的同时，与导叶发生干涉，后置转子也受到导叶尾迹的影响，
+转子的激励力向导管、导叶传播，使得导管、导叶和转子的轴向力脉动频谱中均体现出了导叶叶频及其倍频。
+由于后转子入口直接受导叶尾迹的影响，因此后置转子的轴向激励力中导叶通过频率成分最为突出。
+结合试验噪声信号的分析，噪声信号和流致振动激励源信号的频谱能量分布显示出良好的一致性，
+两者均呈现出低频宽带特征。双级推进泵前后叶轮、导叶与导管四个部件上的非定常力频谱均以导叶频率为主导；
+从泵内压力分布云图也可以显示出导叶与叶轮的干涉作用显著。
+以上说明导叶与叶轮的相互作用使叶轮非定常力整体上升，如果面向导叶-叶轮匹配性进行优化设计，
+通过调整导叶结构特征（如骨线形状，厚度分布规律）、叶轮-导叶间距及导叶叶片数等控制导叶流场分布，降低其对叶轮流场的干涉，对推进泵总体的振动噪声控制较为有利。
+
 
 \section{本章小结}
 
