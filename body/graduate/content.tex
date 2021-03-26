@@ -257,7 +257,7 @@ Rajan等\cite{rajanCyclostationarityBasedSonar2016}分析了螺旋桨噪声的�
 推进泵噪声的特征线谱提取和分析。针对声纹线谱特征提取的需求，
 首先，基于循环平稳分析方法实现了推进泵低频线谱成分的提取；
 其次，采用 CFD 数值模拟获得了推进泵脉动力特征，
-检核循环平稳分析方法的提取结果可以和非定常脉动力的特征线谱，
+结合循环平稳分析方法的低频线谱提取结果和非定常脉动力的特征线谱，
 验证循环平稳分析方法提取特征线谱的可行性；
 最后，对推进泵噪声的调制特性进行了研究。
 \chapter{推进泵噪声测试与分析系统设计}
@@ -826,22 +826,22 @@ $\eta _{0}$表示效率。
 \subsubsection{单级推进泵噪声三分之一倍频程分析}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=0.95]{3dj2_otc.png}
+    \includegraphics[scale=0.95]{3dj2_otc1.png}
     \caption{\label{fig:djotc1}单级推进泵噪声1/3倍频程分析（1号传感器）}
 \end{figure}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=0.95]{3dj3_otc.png}
+    \includegraphics[scale=0.95]{3dj3_otc1.png}
     \caption{\label{fig:djotc2}单级推进泵噪声1/3倍频程分析（2号传感器）}
 \end{figure}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=0.95]{3dj6_otc.png}
+    \includegraphics[scale=0.95]{3dj6_otc1.png}
     \caption{\label{fig:djotc3}单级推进泵噪声1/3倍频程分析（3号传感器）}
 \end{figure}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=0.95]{3dj7_otc.png}
+    \includegraphics[scale=0.95]{3dj7_otc1.png}
     \caption{\label{fig:djotc4}单级推进泵噪声1/3倍频程分析（4号传感器）}
 \end{figure}
 
@@ -1686,7 +1686,7 @@ CFD数值计算结果与试验结果对比如\autoref{fig:sj_monishiyan}所示�
 （对应 7fn），导叶叶频表示为 SBPF（对应 11fn）。
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1]{5单级非定常激励力0.4.png}
+    \includegraphics[scale=1]{5单级非定常激励力0.4_1.png}
     \caption{\label{fig:djCFD0.4}J=0.4进速系数下单级推进泵轴向脉动力频谱}
 \end{figure}
 
@@ -1700,7 +1700,7 @@ CFD数值计算结果与试验结果对比如\autoref{fig:sj_monishiyan}所示�
 除了BPF、SBPF等离散线谱外，还存在有叶频与轴频之间的差值线谱频率。
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1]{5单级非定常激励力0.79.png}
+    \includegraphics[scale=1]{5单级非定常激励力0.79_1.png}
     \caption{\label{fig:djCFD0.79}J=0.79进速系数下单级推进泵轴向脉动力频谱}
 \end{figure}
 \subsection{试验噪声的特征线谱提取与分析}
@@ -1818,21 +1818,22 @@ CFD数值计算结果与试验结果对比如\autoref{fig:sj_monishiyan}所示�
 为了更好的表述频谱中的特征频率，将双级推进泵的轴频定义为 APF（对应$f_n$），首级叶轮叶频定义为
 BPF$_1$（对应 5$f_n$），导叶叶频表示为 SBPF（对应 11$f_n$），次级叶轮叶频定义为 BPF$_2$（对
 应 6$f_n$）。
+\begin{comment}
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{4J0.5非定常激振力1.png}
     \caption{\label{fig:sjF0.5}J=0.5进速系数下双级推进泵轴向脉动力频谱}
 \end{figure}
-\begin{comment}
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[scale=1]{4J1.0非定常激振力1.png}
-    \caption{\label{fig:sjF1.0}J=1.0进速系数下双级推进泵轴向脉动力频谱}
-\end{figure}
 \end{comment}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1]{4J1.5非定常激振力1.png}
+    \includegraphics[scale=1]{4J1.0非定常激振力2.png}
+    \caption{\label{fig:sjF1.0}J=1.0进速系数下双级推进泵轴向脉动力频谱}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=1]{4J1.5非定常激振力2.png}
     \caption{\label{fig:sjF1.5}J=1.5进速系数下双级推进泵轴向脉动力频谱}
 \end{figure}
 
@@ -1969,7 +1970,7 @@ BPF$_1$，SBPF等特征线谱与轴频的谐频成分重叠在一起。
 验证了循环平稳解调算法提取多组分调制频率的有效性和良好的抗噪性能。
  
 （4）推进泵噪声的特征线谱提取和分析。针对声纹线谱特征提取的需求，
-基于循环平稳分析方法实现了推进泵特征线谱的提取。
+基于循环平稳分析方法实现了推进泵低频线谱的提取。
 为了验证循环平稳分析方法提取特征线谱的可行性，采用 CFD 数
 值模拟获得了推进泵脉动力特征，
 结果表明循环平稳分析方法提取出的低频线谱成分可以和非定常脉动力的特征线谱对应起来。
@@ -2017,7 +2018,7 @@ BPF$_1$，SBPF等特征线谱与轴频的谐频成分重叠在一起。
 通过循环平稳分析方法的解调分析，探讨了推进泵的调制频率。
 但是并未对激励信号的调制机理进行深入分析。
 希望在后续的研究中，对推进泵流致噪声的激励机理进行深入理论分析，
-构建内部流场与噪声之间的联系，明确调制特征的物理意义，进一步指导推进泵的设计。
+构建内部流场与噪声之间的联系，明确调制特征的物理意义，进一步指导推进泵的声学抑制设计。
 
 （3）单级推进泵与双级推进泵的流动特征分析及对比。
 文中展示了两种推进泵的水动力性能试验结果和频谱能量分布，
