@@ -24,10 +24,14 @@
 推进泵结构复杂，其辐射噪声场同时存在转子旋转声源，以及定子导管结构的静止声源。
 因此推进泵噪声的线谱特征丰富，其中不仅包含有转子叶片离散线谱信息，同时也包括
 动静相互作用的影响。
-噪声的线谱特征不仅能表征推进泵的工作状态和结构信息，
-%当监测和识别推进泵水声目标信号时，噪声的特征线谱
+噪声的特征线谱是推进泵噪声研究中所关注的重点，
+特征线谱不仅能表征推进泵的工作状态和结构信息，
 也是声呐系统追踪和识别的重要信息。
-推进泵的声纹线谱特征已成为噪声研究所关注的重点。
+%但是其提取面临环境干扰强、直接测量难度大的问题。
+%噪声的特征线谱不仅能表征推进泵的工作状态和结构信息，
+%当监测和识别推进泵水声目标信号时，噪声的特征线谱
+%也是声呐系统追踪和识别的重要信息。
+%推进泵噪声的特征线谱已成为噪声研究所关注的重点。
 但是由于复杂环境声场对推进泵辐射噪声的干扰，
 监测系统接收到的目标声场信号的信噪比较低，
 传统的频谱分析方法已无法实现噪声中特征线谱的准确识别。
@@ -119,7 +123,7 @@
 国内对于噪声测试分析系统的研究起步较晚，从八十年代大力发展之后，
 许多企业和高校单位也相继研制出各种噪声测试分析系统\cite{jiangJi2020,sun2020}。
 目前国内在数据采集卡和上位机分析软件的结合方面主要采用的方式有两种，一
-种是自行购买数据采集卡，然后自行设计上位机分析软件，这种方案价格低廉，具有灵活的扩展能力，
+种是自行购买数据采集卡，然后自行设计上位机分析软件。这种方案价格低廉，具有灵活的扩展能力，
 但是自行开发上位机软件周期长。
 如肖艳华等\cite{xiaoJiYu2017}构建了一种以LabVIEW为软件平台的多通道噪声倍频程分析系统。
 余世策等\cite{余世策2016基于虚拟仪器的噪声测试系统研发}采用NI通用数据采集卡和声压传感器搭建了通用噪声测试系统，
@@ -189,7 +193,7 @@ Qin\cite{qinUnderwaterRadiatedNoise2019a}和Sun\cite{sunNumericalInvestigationNo
 
 总的来说，推进泵噪声机理复杂，声纹特征丰富，
 噪声信号中不仅包含有转子叶片的离散线谱信息，同时也包括动-静相互作用的影响。
-目前对推进泵噪声的研究主要集中在低频线谱噪声特征频率、线谱噪声幅值量级、声指向性等噪声特性上，研究手段以理论计算和数值模拟为主，
+目前对推进泵噪声的研究主要集中在低频线谱噪声特征频率、声指向性等噪声特性上，研究手段以理论计算和数值模拟为主，
 推进泵声纹特征的内涵有待于进一步研究。
 
 \subsection{循环平稳信号分析手段}
@@ -206,7 +210,7 @@ Qin\cite{qinUnderwaterRadiatedNoise2019a}和Sun\cite{sunNumericalInvestigationNo
 循环平稳分析方法是一种基于高阶统计量的特征提取算法，
 该方法具有较好的抗噪性能\cite{gardnerCyclostationarityHalfCentury2006,songRobustPassiveUnderwater2019}。
 
-近年来，循环平稳分析方法开始用于机械故障检测以及旋转机械信号特征提取领域\cite{何俊2007,antoniCyclicSpectralAnalysis2007a,2017Extrapolation}。
+近年来，循环平稳分析方法开始用于机械故障检测以及旋转机械信号特征提取领域\cite{2006Detecting,poirierExtrapolationDynamicLoad2017,fengGearDamageAssessment2011,何俊2007,antoniCyclicSpectralAnalysis2007a,2017Extrapolation}。
 基于二阶循环平稳性的分析方法是高阶统计量中旋转机械特征信息提取的最有效手段\cite{antoniUseCyclicPower2005}。
 Boungou等\cite{boungouFatigueDamageDetection2015}利用二阶循环平稳分析方法用于不锈钢在周期性
 载荷作用下内部疲劳损伤的特征提取和探测，并实现了故障特征的准确识别。
@@ -218,7 +222,7 @@ Boungou等\cite{boungouFatigueDamageDetection2015}利用二阶循环平稳分析
 李诗佯等\cite{2019Cyclostationary}人将CFD（计算流体力学）方法和循环平稳分析方法相结合，
 建立了离心泵振动信号的幅值调制模型，有效的从振动信号中提取出流致振动激励特征。
 循环平稳分析方法也被应用于螺旋桨的辐射噪声信号的解调，能
-够有效的用于螺旋桨的状态特征提取和目标识别\cite{antoniDetectionSurfaceShips2012}。
+够有效的用于螺旋桨的状态特征提取和目标识别\cite{antoniDetectionSurfaceShips2012,2016Cyclostationary}。
 Rajan等\cite{rajanCyclostationarityBasedSonar2016}分析了螺旋桨噪声的幅值调制特征，
 基于其循环平稳特征识别了叶片数和轴频等声纹特征，验证了循环平稳分析方法的抗干扰性。
 
@@ -227,7 +231,7 @@ Rajan等\cite{rajanCyclostationarityBasedSonar2016}分析了螺旋桨噪声的�
 
 \section{研究目标和内容}
 %非均匀流场与泵相互作用产生的非定常负载和压力脉动是推进泵流致激励的内在表现。
-本文围绕推进泵噪声的声纹特征研究展开，针对声纹线谱特征提取的需求，
+本文围绕推进泵噪声的声纹特征研究展开，针对噪声特征线谱提取的需求，
 以紧凑型前置导叶的单级推进泵和新型结构的双级推进泵为研究对象，
 设计噪声测试与分析系统并开展试验研究，
 研究了推进泵噪声的声纹特征，
@@ -260,14 +264,14 @@ Rajan等\cite{rajanCyclostationarityBasedSonar2016}分析了螺旋桨噪声的�
 型的研究。首先，结合推进泵噪声信号产生的机理，将推进泵噪声信号分量分为确定性信号分量、
 调制信号分量和噪声信号分量，并对各分量的统计
 特征进行分析研究；其次，基于推进泵噪声信号的循环平稳特性，对一阶循环平稳统计量和
-二阶循环平稳统计量进行了介绍，为噪声信号的预处理和调制信号的解调算法提供基础。
+二阶循环平稳统计量进行了介绍，为噪声信号的预处理和调制信号的解调算法提供理论基础。
 最后，结合推进泵噪声信号特征，
 对匀速运转工况下的无空化噪声信号建立了幅值调制信号模型，采用循环平稳
 分析方法对噪声信号的仿真模型进行了研究，验证了循环平稳解调算法提取多组分调制
 频率的有效性和良好的抗噪性能。
 
 第五章，
-推进泵噪声的特征线谱提取和分析。针对声纹线谱特征提取的需求，
+推进泵噪声的特征线谱提取和分析。针对噪声的特征线谱提取的需求，
 首先，基于循环平稳分析方法实现了推进泵低频线谱成分的提取；
 其次，采用 CFD 数值模拟获得了推进泵脉动力特征，
 结合循环平稳分析方法的低频线谱提取结果和非定常脉动力的特征线谱，
@@ -345,7 +349,7 @@ Rajan等\cite{rajanCyclostationarityBasedSonar2016}分析了螺旋桨噪声的�
 
 \subsection{测试基本参数和数据处理}
 本研究设计的测试信号对象为声压，用来表征测试对象的声学性能，可由水听器进行测量。
-为了分析推进泵噪声的低频离散线谱噪声特征频率、线谱噪声幅值、总声压量级和噪声谱的频率分布
+为了分析推进泵噪声的总声压量级、频谱能量分布
 等声纹特征，在数据处理方面，主要涉及频谱分析、1/3倍频程分析和特征频段的总声压级分析。
 
 在噪声信号的分析中，声压级是常用的参数，一个声学量的级是该量与同类量的基准值之比的对数。
@@ -354,6 +358,7 @@ Rajan等\cite{rajanCyclostationarityBasedSonar2016}分析了螺旋桨噪声的�
     \label{equ:p}
     L_{p} = 20\log_{10}{\left(p_{re}/p_{ref}\right )}
 \end{equation}
+
 式中，在水中基准声压为$p_{ref}= 1\times 10^{-6} \mathrm{P} a$，在空气中基准声压为$p_{ref}= 2\times 10^{-5} \mathrm{P} a$。
 \begin{comment}
 同理，振动加速度级也定义为加速度有效值$a_e$与基准加速度$a_{ref}$之比的以10为底的对数，再乘以20，以分贝计，即
@@ -363,6 +368,7 @@ Rajan等\cite{rajanCyclostationarityBasedSonar2016}分析了螺旋桨噪声的�
 \end{equation}
 式中，基准加速度值为$a_{ref}= 1\times 10^{-6} \mathrm{m/s^2} $。
 \end{comment}
+
 信号的频谱是指信号的频率成分与能量分布的关系，可以体现信号的频率特征。
 通过对采样信号进行快速傅立叶变换，可计算出信号的功率谱或幅值谱。
 为了衡量某个频段内的能量，常用总声压量级来表示。
@@ -393,6 +399,7 @@ Rajan等\cite{rajanCyclostationarityBasedSonar2016}分析了螺旋桨噪声的�
     \label{equ:detaf}
     \Delta f=f_{u}-f_{l}
 \end{equation}
+
 获取信号的幅值谱或者功率谱后，
 每一个中心频率带宽的有效值可通过\autoref{equ:total}计算，
 从而得到该频段内的总声压级。
@@ -408,7 +415,6 @@ Workbench，LabVIEW)的基础上完成的。
     \includegraphics[scale=0.55]{2硬件设备流程图.png}
     \caption{\label{fig:framework}技术框架图}
 \end{figure}
-
 综合考虑成本和功能扩展性因素，在数据采集卡和上位机分析软件的结合方面，
 本研究选用的方案是购买美国NI公司的数据采集卡，基于LabVIEW自行开发上位机软件。
 通过LabVIEW调用硬件设备的底层驱动程序，结合软件功能模块，从而搭建出控制数据采集传输，处理和存储的系统。
@@ -556,7 +562,7 @@ LabVIEW中缓冲区大小的设置也和采样模式有关，常用的采样模�
 
 \subsection{信号分析模块}
 LabVIEW适合于数据采集、仪器控制、和图像显示等应用，可以高效地构建虚拟仪器系统。
-然而这种图形化的软件开发环境对于复杂的数值计算和分析要求就显得力不从心，
+然而这种图形化的软件开发环境对于复杂的数值计算和分析要求就显得力不从心。
 在对各种信号分析算法的支持方面，LabVIEW的工具箱也非常有限。
 LabVIEW8.2以后版本推出了仿真框图和面向数学的文本编辑语言MathScript，它带
 有交互式窗口和可编辑的接口，通过MathScript用户可以在LabVIEW图形化程序中运行较简单的m文件语法脚本\cite{周惠2007LabVIEW,柴敬安2008Labview}。
@@ -625,8 +631,8 @@ LabVIEW中的数据类型与MATLAB中的数据类型相匹配，才能够进行�
 
 \chapter{推进泵噪声的声纹特征分析}\label{ch:chapter3}
 \section{引言}
-本文以紧凑型前置导叶的单级推进泵和新型结构的双级推进泵这两种型式的推进泵为研究对象，
-在大型空泡水洞中对其进行噪声试验研究，
+本文以紧凑型前置导叶的单级推进泵和新型结构的双级推进泵为研究对象，
+在大型空泡水洞中对其进行噪声试验研究。
 目的在于阐明推进泵辐射噪声特性与航速之间的声学关联性，以及丰富推进泵声指纹特征的内涵。
 
 试验中通过固定叶轮转速、改变水洞流速的方法，从而获得推进泵在不同水动力性能工况下的噪声数据。
@@ -694,7 +700,7 @@ LabVIEW中的数据类型与MATLAB中的数据类型相匹配，才能够进行�
 \end{figure}
 
 以上分析表明，背景噪声的频谱呈现出中低频段宽带和线谱交叠的形貌，其中100Hz和300Hz电磁干扰线谱成分显著突出。
-背景噪声的能量主要集中中低频段，中低频段的线谱是背景噪声能量的主要贡献者。
+背景噪声的能量主要集中在中低频段，中低频段的线谱是背景噪声能量的主要贡献者。
 背景噪声对推进泵噪声的影响将主要体现在中低频段（10Hz-1 kHz），会降低推进泵中低频段噪声的信噪比。
 因此在后文对推进泵噪声的分析中将会参考水洞背景噪声的频谱特性和
 特征频段能量分布，探究流速与推进泵噪声各频段的声学关联性，
@@ -764,7 +770,7 @@ LabVIEW中的数据类型与MATLAB中的数据类型相匹配，才能够进行�
 导管和导叶推力为天平测得的总推力减去导管连接机翼阻力$(F)$，
 即$T_{D}=T_{D}-F$。在均匀流场常压条件下，推进器模型敞水性能试验采用定转速，
 改变来流速度以获得相应于各个进速系数$J$的推力系数，扭矩系数$K_{Q}$等水动力数据。
-推力系数、扭矩系数等定义如\autoref{equ:three1}-\autoref{equ:three7}所示。
+推力系数、扭矩系数等定义如\autoref{equ:three1}至\autoref{equ:three7}所示。
 \begin{equation}
     \label{equ:three1}
     J=\frac{V}{nD} 
@@ -884,7 +890,7 @@ $\eta _{0}$表示效率。
         \subfigure[pic2.]{
         \includegraphics[scale=1.0]{3dj7_otc.png}
         }
-        %\caption{\label{fig:dj_modle}不同进速系数下单级推进泵水下噪声三分之一倍频程图}
+        %\caption{\label{fig:dj_modle}不同工况下单级推进泵水下噪声三分之一倍频程图}
 \end{figure}
 \addtocounter{figure}{-1}
 \begin{figure}[htbp]
@@ -894,7 +900,7 @@ $\eta _{0}$表示效率。
         \subfigure[pic2.]{
         \includegraphics[scale=1.0]{3dj6_otc.png}
         }
-        %\caption{\label{fig:dj_modle}不同进速系数下单级推进泵水下噪声三分之一倍频程图}
+        %\caption{\label{fig:dj_modle}不同工况下单级推进泵水下噪声三分之一倍频程图}
 \end{figure}
 \addtocounter{figure}{-1}
 \begin{figure}[htbp]
@@ -904,18 +910,18 @@ $\eta _{0}$表示效率。
         \subfigure[pic2.]{
         \includegraphics[scale=1.0]{3dj3_otc.png}
         }
-        \caption{\label{fig:dj_modle}不同进速系数下单级推进泵水下噪声三分之一倍频程图}
+        \caption{\label{fig:dj_modle}不同工况下单级推进泵水下噪声三分之一倍频程图}
 \end{figure}
 \end{comment}
 \subsubsection{单级推进泵噪声特征频段分析}
-为了进一步评估流速对推进泵特征频段的影响，以及各个特征频段对噪声总级的贡献度，
+为了进一步评估流速对推进泵特征频段的影响，以及各个特征频段对噪声总级的贡献度。
 基于噪声测试系统中的数据分析模块，可获得各测点不同频段的声压级平均值，平均方法如\autoref{equ:Lave}所示。
 \begin{equation}
     \label{equ:Lave}
     L_{ave}=10\log_{10}\left ( {10^{0.1L_{p1}}}+{10^{0.1L_{p2}}}+{10^{0.1L_{p3}}}+{10^{0.1L_{p4}}}  \right ) 
 \end{equation}
 
-如\autoref{fig:djtotal}所示为推进泵噪声在不同进速系数下噪声总声压级。
+如\autoref{fig:djtotal}所示为推进泵噪声在不同工况下噪声总声压级。
 从图中可以看出，随着进速系数的变大，各个频段的声压级单调递增。
 对比水洞背景噪声的特征频段总声压级变化，可以发现在低流速工况时，推进泵的噪声总声压级和背景噪声相近，
 说明此时推进泵噪声信号信噪比低。
@@ -928,12 +934,12 @@ $\eta _{0}$表示效率。
 5.05m/s时，低频段和高频段的总声压级的增幅分别为3.1dB和2.0dB。
 考虑背景噪声的影响，水速对中频段（100Hz-1kHz）的总声压级影响更为显著，当水速从1.26m/s增大到5.05m/s时，
 中频段的总声压级增幅达到5.0dB。
-不同进速系数下中频段（100Hz-1kHz）、中低频段（10Hz-1kHz）和全频段（10Hz-10kHz）的变化曲线几乎重合，
+不同工况下中频段（100Hz-1kHz）、中低频段（10Hz-1kHz）和全频段（10Hz-10kHz）的变化曲线几乎重合，
 这说明中低频段噪声是推进泵噪声最主要的贡献量。
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3单级总声压2.png}
-    \caption{\label{fig:djtotal}单级推进泵噪声在不同进速系数下各个频段的噪声总声压级}
+    \caption{\label{fig:djtotal}单级推进泵噪声在不同工况下各个频段的噪声总声压级}
 \end{figure}
 \subsubsection{单级推进泵噪声频谱分析}
 随机选取了2号测点各工况下的噪声信号进行频谱分析，由上小节分析可知噪声频谱能量波动主要集中在中低频段，
@@ -944,17 +950,17 @@ $\eta _{0}$表示效率。
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3dj0.4频谱1.png}
-    \caption{\label{fig:dj0.4}J=0.4进速系数下单级推进泵噪声频谱}
+    \caption{\label{fig:dj0.4}J=0.4工况下单级推进泵噪声频谱}
 \end{figure}
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3dj0.6频谱1.png}
-    \caption{\label{fig:dj0.6}J=0.6进速系数下单级推进泵噪声频谱}
+    \caption{\label{fig:dj0.6}J=0.6工况下单级推进泵噪声频谱}
 \end{figure}
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3dj0.79频谱1.png}
-    \caption{\label{fig:dj0.79}J=0.79进速系数下单级推进泵噪声频谱}
+    \caption{\label{fig:dj0.79}J=0.79工况下单级推进泵噪声频谱}
 \end{figure}
 
 如\autoref{fig:dj0.4}，\autoref{fig:dj0.6}，
@@ -965,12 +971,12 @@ $\eta _{0}$表示效率。
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3dj1.0频谱1.png}
-    \caption{\label{fig:dj1}J=1.0进速系数下单级推进泵噪声频谱}
+    \caption{\label{fig:dj1}J=1.0工况下单级推进泵噪声频谱}
 \end{figure}
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3dj1.2频谱1.png}
-    \caption{\label{fig:dj1.2}J=1.2进速系数下单级推进泵噪声频谱}
+    \caption{\label{fig:dj1.2}J=1.2工况下单级推进泵噪声频谱}
 \end{figure}
 
 结合\autoref{fig:djotc1}至\autoref{fig:djotc4}推进泵噪声三分之一倍频程可以看出，频段能量分布的波动与线谱成分有较大关联。
@@ -1064,10 +1070,10 @@ $\eta _{0}$表示效率。
 
 与上小节研究的单级推进泵相比，两种推进泵的敞水性能曲线对比如\autoref{fig:sj_dj}所示。
 在相同的直径空间下，双级推进泵的推力和转矩基本上相当于两台普通单级推进器。
-此外，可以看到，单级推进泵的效率性能曲线在J=1.2的时候效率就开始下降了，而双级推进泵的效率性能曲线到1.8才开始下降，
+此外，可以看到，单级推进泵的效率性能曲线在J=1.2的时候效率就开始下降了，而双级推进泵的效率性能曲线到1.8才开始下降。
 双级推进泵的特性曲线变化更加平缓，这就使其高效区域更宽，
 并且在高进速系数时仍可以保持较高效率，
-说明双级推进器在高进速系数时仍可以保持较高效率，
+说明双级推进器在高进速系数时仍可以保持较高效率。
 有限的直径空间内，双级推进泵在降低转速的同时也有效提高了能量密度，适用于负荷较重的水面、水下航行器。
 
 在噪声试验方面，采用水听器型号依旧为丹麦 Reson TC4013，采集装置和单级推进泵一致，
@@ -1128,14 +1134,14 @@ $\eta _{0}$表示效率。
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3双级总声压级2.png}
-    \caption{\label{fig:sjtotal}双级推进泵噪声在不同进速系数下各个频段的噪声总声压级}
+    \caption{\label{fig:sjtotal}双级推进泵噪声在不同工况下各个频段的噪声总声压级}
 \end{figure}
 
-为了进一步评估流速对推进泵特征频段的影响以及各个特征频段对噪声总级的贡献度，
+为了进一步评估流速对推进泵特征频段的影响，以及各个特征频段对噪声总级的贡献度。
 基于噪声测试系统中的数据分析模块，获得了各测点不同频段的声压级平均值。
-如\autoref{fig:sjtotal}所示为推进泵噪声在不同进速系数下噪声总声压级。
+如\autoref{fig:sjtotal}所示为推进泵噪声在不同工况下噪声总声压级。
 从图中可以看出，随着进速系数的变大，各个频段的声压级单调递增。
-不同进速系数下中频段（100Hz-1kHz）、中低频段（10Hz-1kHz）和全频段（10Hz-10kHz）的变化曲线几乎重合，
+不同工况下中频段（100Hz-1kHz）、中低频段（10Hz-1kHz）和全频段（10Hz-10kHz）的变化曲线几乎重合，
 这说明中低频段噪声是双级推进泵噪声最主要的贡献量。
 对比水洞背景噪声的特征频段分析，
 可以发现在低流速工况时，推进泵的噪声总声压级和背景噪声相近，
@@ -1162,32 +1168,32 @@ $\eta _{0}$表示效率。
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3sj0.5频谱1.png}
-    \caption{\label{fig:sj0.5}J=0.5进速系数下双级推进泵噪声频谱}
+    \caption{\label{fig:sj0.5}J=0.5工况下双级推进泵噪声频谱}
 \end{figure}
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3sj0.8频谱1.png}
-    \caption{\label{fig:sj0.8}J=0.8进速系数下双级推进泵噪声频谱}
+    \caption{\label{fig:sj0.8}J=0.8工况下双级推进泵噪声频谱}
 \end{figure}
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3sj1.0频谱1.png}
-    \caption{\label{fig:sj1.0}J=1.0进速系数下双级推进泵噪声频谱}
+    \caption{\label{fig:sj1.0}J=1.0工况下双级推进泵噪声频谱}
 \end{figure}
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3sj1.3频谱1.png}
-    \caption{\label{fig:sj1.3}J=1.3进速系数下双级推进泵噪声频谱}
+    \caption{\label{fig:sj1.3}J=1.3工况下双级推进泵噪声频谱}
 \end{figure}
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3sj1.5频谱1.png}
-    \caption{\label{fig:sj1.5}J=1.5进速系数下双级推进泵噪声频谱}
+    \caption{\label{fig:sj1.5}J=1.5工况下双级推进泵噪声频谱}
 \end{figure}
 
 如\autoref{fig:dj0.4}，\autoref{fig:dj0.6}，
 \autoref{fig:dj0.79}，\autoref{fig:dj1}，\autoref{fig:dj1.2}所示，
-分别在不同进速系数工况下的双级推进泵噪声的频谱图。
+分别为在不同工况下双级推进泵噪声的频谱图。
 可以看出频谱中线谱成分丰富，推进泵噪声频谱特性表现为中低频宽带与线
 谱噪声交叠和高频宽带的形貌。
 随着流速的增大，频谱中中低频段的线谱和宽带幅值量级也在提升。
@@ -1202,7 +1208,7 @@ $\eta _{0}$表示效率。
 其中也包括背景噪声带来的干扰频率成分。
 
 此外，在中低频段频谱中识别不到轴频APF成分，但是能观察到2ABF线谱成分。
-在流速较小的工况下，噪声信噪比较低，2BPF$_1$，2BPF$_2$，SBPF等特征频率与其周围线谱的幅值差值不明显，不能准确且快速的识别出来。
+在流速较小的工况下，噪声信噪比较低，2BPF$_1$，2BPF$_2$，SBPF等特征频率与其周围线谱的幅值差值不明显，不能准确且快速的被识别出来。
 这些特征线谱随着流速的增大，在频谱中越容易被识别出来。
 
 综上，双级推进泵噪声频谱特性表现为中低频宽带与线
@@ -1221,8 +1227,8 @@ $\eta _{0}$表示效率。
 本章主要内容包括以下几个方面：
 
 （1）水洞背景噪声的试验研究和声纹特征分析。
-由于水洞测试的局限性会影响推进泵中低频段辐射噪声的声压级量级的可靠性，导致监测到的推进泵噪声的信噪比偏低。
-对多工况下的水洞背景噪声进行了试验及分析，分析表明背景噪声的能量主要集中中低频段，
+由于水洞测试的局限性会影响推进泵中低频段声压级量级的可靠性，导致监测到的推进泵噪声的信噪比偏低。
+本研究对多工况下的水洞背景噪声进行了试验及分析，分析表明背景噪声的能量主要集中中低频段，
 对推进泵噪声的影响体现在中低频段。
 
 （2）单级推进泵噪声的试验研究和声纹特征分析。
@@ -1245,12 +1251,12 @@ $\eta _{0}$表示效率。
 \chapter{推进泵噪声信号的特性研究}
 \section{引言}
 推进泵噪声频谱特性表现为中低频宽带与线
-谱噪声交叠的形貌，其中线谱成分丰富，不仅包含有转子叶片
+谱噪声交叠的形貌。频谱中线谱成分丰富，不仅包含有转子叶片
 的离散线谱信息，同时也包括动静相互作用的影响。
 但是由于水洞测试的局限性，
-监测系统接收到的推进泵噪声信号的信噪比较低，
+监测系统接收到的推进泵噪声信号的信噪比较低。
 传统的噪声特征提取方法，如频谱分析等，具有抗噪性
-能较差，难以提取弱信号特征等缺点，已经无法准确的识别噪声信号中的特征线谱。
+能较差，难以提取弱信号特征等缺点，无法实现噪声信号中特征线谱的准确识别。
 本章基于推进泵噪声信号的特性，结合其噪声信号产生的机理，对噪声信号进行
 组分分析，进行噪声信号的建模仿真，验证循环平稳分析方法的抗噪性和提取能力。
 \begin{comment}
@@ -1321,9 +1327,8 @@ $\eta _{0}$表示效率。
 时，信号的特征频率及幅值并不会发生显著变化。
 \subsection{调制信号分量}
 调制信号分量主要为推进泵旋转构件在旋转过程中产生周期性冲击作用，
-各频率信号相互调制，最终辐射产生调制噪声信号，其具有二阶的统计特性，
+各频率信号相互调制，最终辐射产生调制噪声信号。该组分具有二阶的统计特性，
 二阶统计特性可以表示为\autoref{equ:two}所示。
-
 \begin{equation}
     \label{equ:two}
     m_{2x}\left ( t, \tau \right )  =E\left [ x_{m}\left ( t \right ) \ x_{m}\left ( t+\tau \right )  \right ] 
@@ -1350,21 +1355,21 @@ $\eta _{0}$表示效率。
 能够准确的获得其调制周期，是进行推进泵调制线谱特征提取的有效手段。
 \subsection{环境噪声信号分量}
 环境噪声信号分量主要由于推进泵的噪声测试环境和监测系统引入的
-环境干扰噪声信号，该噪声信号一般为高斯白噪声，不具有一阶、二阶及高阶的统计周期性。
+环境干扰噪声信号。该噪声信号一般为高斯白噪声，不具有一阶、二阶及高阶的统计周期性。
 因此利用信号的统计特性，能够有效的实现监测信号中噪声信号分量的消除，
 有助于推进泵特征频率的提取。
 
 \section{循环平稳统计量}
 推进泵周期运转的方式使其噪声信号具有周期特性，同时由于实际运转状态存在很多随机因素，
 从而使得其噪声信号兼顾周期性和随机性的特点，因此推进泵噪声信号可以归于循环平稳的范畴。
-循环平稳信号在当今的工业生产中普遍存在于通讯、旋转机械等应用场景。
+循环平稳信号在当今的工业生产中普遍存在于通讯、旋转机械等应用场景，
 近年来循环平稳分析方法开始用于机械故障检测以及旋转机械信号特征提取领域。
 \subsection{一阶循环平稳统计量}
 %William A. Gardner定义信号的一阶周期性为信号并不需要非线性变换而本身就包含有限强度的加性正弦波，
 一阶循环平稳也被称为一阶周期性，这类信号采用传统的频谱分析也可以进行有效分析。
 对一阶周期性信号作统计平均求其均值，则其均值为时间的函数，通常称之
 为时变均值，即一阶时变矩。由于该均值为时间的函数，无法直接使用时间平均来估
-计信号的均值。但是，由于该信号的周期$T_{0}$可以通过先验知识得到，就可以对该信号
+计信号的均值\cite{zhou2006}。但是，由于该信号的周期$T_{0}$可以通过先验知识得到，就可以对该信号
 以$T_{0}$为周期进行采样，且满足遍历性，从而可以用样本平均来代替其均值，
 时变均值的定义如\autoref{equ:yijie}所示：
 
@@ -1387,7 +1392,7 @@ $\eta _{0}$表示效率。
 
 在使用时域平均算法对推进泵信号确定性成分进行提取时，
 处理后的信号波形虽然能降低噪声干扰，但是推进泵噪声的确定性信号成分复杂，
-难以实现特征线谱的准确识别，
+难以实现特征线谱的准确识别。
 因此在本文后续的研究，将采用该算法作为信号降噪的预处理手段。
 
 \subsection{二阶循环平稳统计量}
@@ -1496,11 +1501,11 @@ $v\left ( t \right )$为随机平稳信号。
 还会出现这四个调制频率的谐频成分，以及调制频率的干涉频率（10Hz，44Hz等）。
 
 为了验证循环平稳解调算法提取多组分调制频率的有效性和良好的抗噪性能，
-在信号模型中分别加入不同程度的高斯白噪声，其仿真信号的信噪比（Signal to Noise 
+在信号模型中分别加入不同程度的高斯白噪声，仿真信号的信噪比（Signal to Noise 
 Ratio，SNR）分别为0dB，-5dB，-10dB。由于循环谱相干性能表示调制信号的调制强度影响，
 因此本文以循环谱相干性的结果讨论为主。
-仿真信号的循环谱相干性采用一种快速算法计算，信号的采样
-频率设置为20480Hz。
+仿真信号的循环谱相干性采用一种快速算法计算\cite{antoniFastComputationSpectral2017}。信号的采样
+频率设置为20480Hz，
 不同信噪比的仿真信号的循环谱相干性分析结果如\autoref{fig:db0}、\autoref{fig:db-5}
 和\autoref{fig:db-10}所示。
 \begin{figure}[htbp]
@@ -1580,7 +1585,7 @@ Ratio，SNR）分别为0dB，-5dB，-10dB。由于循环谱相干性能表示调
 
 （3）推进泵噪声信号的建模与仿真分析。
 结合推进泵噪声信号产生的机理和噪声信号特征，对匀速运转工况下的噪声
-信号建立了幅值调制信号模型，采用循环谱相干性作为二阶循环平稳统
+信号建立了幅值调制信号模型。采用循环谱相干性作为二阶循环平稳统
 计量对噪声信号的仿真模型进行了研究，验证循环平稳解调算法提
 取多组分调制频率的有效性和良好的抗噪性能。
 
@@ -1593,13 +1598,18 @@ Ratio，SNR）分别为0dB，-5dB，-10dB。由于循环谱相干性能表示调
     p\left ( \mathbf{r} ,t \right ) =\frac{\mathbf{F}\cdot \mathbf{r} }{4\pi rc} =\frac{F\left ( t' \right ) }{4\pi rc}\cos \theta  
 \end{equation}
 式中，$t'$为迟滞时间，$\mathbf{F}$为脉动力，$r$为脉动力源到测点距离，$\theta$为与矢量之间夹角，
-$\cos \theta$项用于表征脉动力源的偶极声场指向性，该式表明了脉动力源与其辐射声场之间的直接联系。
+$\cos \theta$项用于表征脉动力源的偶极声场指向性，该式表明了脉动力源与其辐射声场之间的直接联系\cite{__2016杨琼方}。
 推进泵导叶、叶轮和导管壁面的非定常脉动压力是推进泵无空化状态下最主要的低频线谱噪声源。
+%说明非定常脉动力的特征线谱频率能在噪声信号中体现出来。
 在推进泵噪声预报方面，往往也是通过CFD计算得出的推进泵壁面压力脉动及轴向脉动推力，
-从而分析推进泵低频离散线谱\cite{__2016杨琼方}。
+从而分析推进泵低频离散线谱。
 
+%由于推进泵低频线谱噪声的提取面临环境干扰强、直接测量难度大的问题，
+%因此本章CFD数值模拟来验证验证循环平稳分析方法提取特征线谱的可行性，
+在上节循环平稳对多调制信号模型的解调分析中，分析结果中有调制频率的干涉项产生。
+因此在使用循环平稳分析推进泵噪声信号之前，需要通过数值模拟获取特征频率的先验知识。
 本章通过CFD数值模拟计算获取了多工况下推进泵的激励力信号，
-分析了推进泵脉动力源的关键特性。
+分析了推进泵脉动力源的关键特性，获取了特征频率的先验知识。
 其次，引入二阶循环统计量提取了试验噪声信
 号中的特征线谱。最后联合数值模拟中获得的非定常脉动力特征，验证了循环平稳分析
 方法提取特征线谱的可行性，分析了推进泵噪声的调制特性。
@@ -1622,7 +1632,8 @@ $\cos \theta$项用于表征脉动力源的偶极声场指向性，该式表明�
 \end{comment}
 \section{单级推进泵的特征线谱提取和分析}
 \subsection{数值模型及计算方法}
-为了验证循环平稳分析方法提取噪声中特征线谱的可行性，本章节首先对噪声线谱的声源特征进行了分析。
+为了验证循环平稳分析方法提取噪声中特征线谱的可行性，本章节首先对脉动力源的关键特性进行了分析，
+获取了特征频率的先验知识。
 本文对单级推进泵开展了非定常数值模拟计算，以获得推进泵内部的脉动力特征。
 数值模拟计算依托商用平台ANSYS Fluent开展，
 采用CFX Turbogrid与ICEM生成计算域网格如\autoref{fig:djjisuanyu}所示。
@@ -1640,35 +1651,31 @@ D为叶轮直径。计算域入口距离推进泵前缘5L，
 相邻计算域采用interface连接，
 外流域壁面和物面采用无滑移壁面条件。
 泵内、外计算域均采用六面体结构化网格。
-此外，在叶片、导管等壁面以及交界面的网格进行加密处理，
+此外，在叶片、导管等壁面以及交界面的网格进行加密处理。
 为了适应SST湍流模型，如\autoref{fig:djyplus}所示，使叶片表面y$^+$小于15，
 以得到合理的边界层计算结果。
-如\autoref{fig:djwangge}、\autoref{fig:djjisuanyuwangge}所示为单级推进泵网格和计算与网格。
+如\autoref{fig:djwangge}、\autoref{fig:djjisuanyuwangge}所示为单级推进泵网格和计算域网格。
 \begin{figure}[htbp]
     \centering
     \subfigure[单级推进泵表面网格]{
-    \includegraphics[scale=0.25]{5单级推进泵网格.png}
+    \includegraphics[scale=0.23]{5单级推进泵网格.png}
     }
-    \vspace{0.02cm}
     \subfigure[表面网格加密]{
-    \includegraphics[scale=0.15]{5单级网格加密.png}
+    \includegraphics[scale=0.16]{5单级网格加密.png}
     }
     \caption{\label{fig:djwangge}单级推进泵表面网格}
 \end{figure}
-
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1.0]{4计算域网格.png}
     \caption{\label{fig:djjisuanyuwangge}单级推进泵计算域网格}
 \end{figure}
-
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1.0]{5单级yplus.png}
     \caption{\label{fig:djyplus}单级推进泵表面y$^+$}
 \end{figure}
-
-经过网格无关性验证后确定总网格量，各计算与网格数如\autoref{tab:djshuliang}所示。
+经过网格无关性验证后确定总网格量，各计算域网格数如\autoref{tab:djshuliang}所示。
 \begin{table}[htbp]
     \centering
     \caption{\label{tab:djshuliang}单级推进泵各计算域网格数量}
@@ -1683,7 +1690,9 @@ D为叶轮直径。计算域入口距离推进泵前缘5L，
 
 单级推进泵的CFD数值计算采用的湍流模型为SST k-ω模型，压力速度耦合方式为SIMPLEC，
 压力项离散方式为二阶离散，动量项离散方式为二阶迎风格式，其他项均采用一阶迎风格式离散\cite{rao2012,bai2020}。
-CFD数值计算结果与试验结果对比如\autoref{fig:sj_monishiyan}所示，CFD仿真结果与实验数据呈现了较好的一致性，
+CFD数值计算结果与试验结果对比如\autoref{fig:sj_monishiyan}所示。
+推力系数的试验值和模拟值基本吻合，效率和扭矩系数在小流量的情况下吻合较好，在大流量的情况下偏差较大。
+总体来说，CFD仿真结果与实验数据呈现了较好的一致性，
 验证了计算结果的可靠性。
 \begin{figure}[htbp]
     \centering
@@ -1697,7 +1706,7 @@ CFD数值计算结果与试验结果对比如\autoref{fig:sj_monishiyan}所示�
 作为初始值以增强收敛性，并且每个非定常计算过程包含叶轮运转20圈的结果，
 前3圈的数据由于计算还没有完全收敛而没有在进一步的分析中采用。
 \subsection{非定常脉动力仿真结果与分析}
-通过非定常模拟获得了首级和次级叶轮、导叶与导管等四个部件上的轴向非定常脉动力，
+通过非定常模拟获得了叶轮、导叶与导管等部件上的轴向非定常脉动力，
 分别计算了推进泵在进速系数分别为0.4，0.79试验工况下的数据。
 分析结果中对频率作了无量纲化处理，即采用轴系转速进行无量纲化 ($f/f_n$)。为了更好的表述
 频谱中的特征频率，将单级推进泵的轴频定义为 APF（对应$f_n$），叶轮叶频定义为 BPF
@@ -1705,7 +1714,7 @@ CFD数值计算结果与试验结果对比如\autoref{fig:sj_monishiyan}所示�
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{5单级非定常激励力0.4_1.png}
-    \caption{\label{fig:djCFD0.4}J=0.4进速系数下单级推进泵轴向脉动力频谱}
+    \caption{\label{fig:djCFD0.4}J=0.4工况下单级推进泵轴向脉动力频谱}
 \end{figure}
 
 \autoref{fig:djCFD0.4}展示了J=0.4工况下，
@@ -1720,7 +1729,7 @@ CFD数值计算结果与试验结果对比如\autoref{fig:sj_monishiyan}所示�
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{5单级非定常激励力0.79_1.png}
-    \caption{\label{fig:djCFD0.79}J=0.79进速系数下单级推进泵轴向脉动力频谱}
+    \caption{\label{fig:djCFD0.79}J=0.79工况下单级推进泵轴向脉动力频谱}
 \end{figure}
 \subsection{试验噪声的特征线谱提取与分析}
 采用循环平稳分析方法对多个工况的推进泵试验噪声信号进行了低频特征解调分析，
@@ -1728,13 +1737,13 @@ CFD数值计算结果与试验结果对比如\autoref{fig:sj_monishiyan}所示�
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{dj1.2解调1.png}
-    \caption{\label{fig:djjietiao1.2}J=0.4进速系数下单级推进泵噪声循环平稳分析结果}
+    \caption{\label{fig:djjietiao1.2}J=0.4工况下单级推进泵噪声循环平稳分析结果}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{dj0.4解调2.png}
-    \caption{\label{fig:djjietiao0.4}J=0.79进速系数下单级推进泵噪声循环平稳分析结果}
+    \caption{\label{fig:djjietiao0.4}J=0.79工况下单级推进泵噪声循环平稳分析结果}
 \end{figure}
 
 \autoref{fig:djjietiao1.2}为J=0.4工况下单级推进泵噪声信号的循环谱相干性分析结果，
@@ -1751,7 +1760,7 @@ CFD数值计算结果与试验结果对比如\autoref{fig:sj_monishiyan}所示�
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{dj0.79解调2.png}
-    \caption{\label{fig:djjietiao0.79}J=1.2进速系数下单级推进泵噪声循环平稳分析结果}
+    \caption{\label{fig:djjietiao0.79}J=1.2工况下单级推进泵噪声循环平稳分析结果}
 \end{figure}
 
 联合试验噪声信号的循环平稳分析和非定常脉动力的特征分析结果，
@@ -1840,19 +1849,19 @@ BPF$_1$（对应 5$f_n$），导叶叶频表示为 SBPF（对应 11$f_n$），�
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{4J0.5非定常激振力1.png}
-    \caption{\label{fig:sjF0.5}J=0.5进速系数下双级推进泵轴向脉动力频谱}
+    \caption{\label{fig:sjF0.5}J=0.5工况下双级推进泵轴向脉动力频谱}
 \end{figure}
 \end{comment}
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{4J1.0非定常激振力2.png}
-    \caption{\label{fig:sjF1.0}J=0.5进速系数下双级推进泵轴向脉动力频谱}
+    \caption{\label{fig:sjF1.0}J=0.5工况下双级推进泵轴向脉动力频谱}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{4J1.5非定常激振力2.png}
-    \caption{\label{fig:sjF1.5}J=1.0进速系数下双级推进泵轴向脉动力频谱}
+    \caption{\label{fig:sjF1.5}J=1.0工况下双级推进泵轴向脉动力频谱}
 \end{figure}
 
 \autoref{fig:sjF1.0}展示了进速系数为0.5工况下，
@@ -1872,7 +1881,7 @@ BPF$_1$（对应 5$f_n$），导叶叶频表示为 SBPF（对应 11$f_n$），�
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{5sjdb0.8解调.png}
-    \caption{\label{fig:sjjietiao0.5}J=0.5进速系数下双级推进泵噪声循环平稳分析结果}
+    \caption{\label{fig:sjjietiao0.5}J=0.5工况下双级推进泵噪声循环平稳分析结果}
 \end{figure}
 \autoref{fig:sjjietiao0.5}展示了J=0.5工况下双级推进泵噪声信号的循环谱相干性分析结果。
 从循环谱相干性图中可以清晰识别出APF，BPF$_1$，SBPF等频率成分，
@@ -1882,7 +1891,7 @@ BPF$_1$（对应 5$f_n$），导叶叶频表示为 SBPF（对应 11$f_n$），�
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{5sjdb1.0解调2.png}
-    \caption{\label{fig:sjjietiao1.0}J=1.0进速系数下双级推进泵噪声循环平稳分析结果}
+    \caption{\label{fig:sjjietiao1.0}J=1.0工况下双级推进泵噪声循环平稳分析结果}
 \end{figure}
 
 \autoref{fig:sjjietiao1.0}展示了J=1.0工况下双级推进泵噪声信号的循环谱相干性分析结果。
@@ -1898,7 +1907,7 @@ BPF$_1$，SBPF等特征线谱与轴频的谐频成分重叠在一起。
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{5sjdb1.5解调2.png}
-    \caption{\label{fig:sjjietiao1.5}J=1.5进速系数下双级推进泵噪声循环平稳分析结果}
+    \caption{\label{fig:sjjietiao1.5}J=1.5工况下双级推进泵噪声循环平稳分析结果}
 \end{figure}
 
 \autoref{fig:sjjietiao1.5}为J=1.5工况下双级推进泵噪声信号的循环谱相干性分析结果。
@@ -1946,7 +1955,7 @@ BPF$_1$，SBPF等特征线谱与轴频的谐频成分重叠在一起。
 
 \chapter{总结与展望}
 \section{全文总结}
-本文围绕推进泵噪声的声纹特征研究展开，针对声纹线谱特征提取的需求，
+本文围绕推进泵噪声的声纹特征研究展开，针对噪声的特征线谱提取的需求，
 以紧凑型前置导叶的单级推进泵和新型结构的双级推进泵为研究对象，
 设计噪声测试与分析系统并开展试验研究，
 研究了推进泵噪声的声纹特征，
@@ -1987,7 +1996,7 @@ BPF$_1$，SBPF等特征线谱与轴频的谐频成分重叠在一起。
 采用循环平稳分析方法对噪声信号的仿真模型进行了研究，
 验证了循环平稳解调算法提取多组分调制频率的有效性和良好的抗噪性能。
  
-（4）推进泵噪声的特征线谱提取和分析。针对声纹线谱特征提取的需求，
+（4）推进泵噪声的特征线谱提取和分析。针对噪声的特征线谱提取的需求，
 基于循环平稳分析方法实现了推进泵低频线谱的提取。
 为了验证循环平稳分析方法提取特征线谱的可行性，采用 CFD 数
 值模拟获得了推进泵脉动力特征，
