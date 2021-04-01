@@ -1,5 +1,6 @@
 \cleardoublepage
 \chapternonum{摘要}
+\begin{comment}
 目前船艇推进系统对高效低噪声推进泵的需求日益迫切，
 在满足推进性能需求的基础上，
 推进泵水下噪声已经成为一项关键技术指标。
@@ -52,9 +53,65 @@
 发现推进泵噪声信号具有强烈的调制特征，其中轴频和动叶叶频为主要的调制频率。
 随着流速的增大，动叶叶频的调制效应也愈发显著。
 
+\end{comment}
+作为推进泵减振降噪与低噪声设计的基础前提，充分揭示推进泵辐射噪声的关键影响因素与形成机理具有重要意义。
+推进泵辐射噪声中线谱噪声辨识度强、对总体噪声贡献度高，
+可在一定程度上表征推进器的工作状态和结构信息，是推进泵辐射噪声研究中所关注的重点。
+而在推进泵中，由于导叶、叶轮及其他构件间的相互影响，其线谱噪声产生机理更为复杂；
+并且在某些环境下，噪声信噪比低也致使线谱噪声的识别提取相对困难，给推进泵噪声机理分析带来难度。
+
+本文以推进泵的声纹特征及线谱提取方法为中心展开研究，
+以某前置导叶推进泵与某双级推进泵为对象，重点研究了低信噪比条件下推进泵特征线谱噪声的提取方法、
+推进泵的主要声纹特征与特征线谱噪声模型，具体内容如下：
+
+（1）基于 LabVIEW 的推进泵噪声测试与分析系统设计。其中涵盖了传感器、数据采集等硬件设计，
+以及信号分析、显示、存储等软件模块的设计。该系统支持同步对多通道传感器信号实时采集，
+各通道信号同时分析、显示及存储，具有操作简单、经济高效等优势。基于系统的信号分析模块，
+可实现对噪声的频段能量分布特点、特征频段总声压量级、频谱特征等声纹特征分析。
+
+（2）基于空泡水筒试验平台的单级推进泵和双级推进泵辐射噪声测量与声纹特征分析。
+首先，开展了水洞背景噪声的试验研究，在此基础上，
+研究不同工况下推进泵噪声的声纹特征变化规律，以及工况特征参数与噪声主要特征的关联性。
+结果表明，推进泵噪声能量主要集中在中低频段。噪声各特征频段的声压级均随流速增长，
+并且流速变化对推进泵噪声能量分布和总声压级的影响主要体现在中低频段。
+
+（3）基于推进泵噪声试验数据进行推进泵噪声信号的模型分析。
+结合推进泵噪声信号产生的机理和噪声信号特征，对噪声信号进行了组分分析。
+推进泵噪声信号成分主要包括确定性信号分量、调制信号分量和环境噪声信号分量。
+基于推进泵噪声信号的循环平稳特性和各组分的特点，介绍了一阶和二阶循环平稳统计量，
+为噪声信号的预处理和调制信号的解调算法提供基础。
+对匀速运转工况下的无空化噪声信号建立了幅值调制信号模型，
+采用循环平稳分析方法对噪声信号的仿真模型进行了研究，
+验证了循环平稳解调算法提取多组分调制频率的有效性和良好的抗噪性能。 
+
+（4）基于循环平稳分析算法的推进泵噪声特征线谱提取研究。
+首先，采用二阶循环平稳统计量，对两种推进泵噪声进行了特征线谱提取，
+提取了轴频和叶频及其谐频等低频线谱成分。为了验证这种特征分析提取方法，
+采用 CFD 数值模拟获得了推进泵脉动力特征，
+发现循环平稳分析方法提取出的低频线谱成分可以与非定常脉动力的特征线谱相对应。
+基于特征提取结果，研究推进泵噪声内隐含的调制关系，
+发现推进泵噪声信号具有强烈的调制特征，其中轴频和动叶叶频为主要的调制频率。
+随着流速的增大，动叶叶频的调制贡献度也将明显增大。
+
 
 \quad
 
 关键词：推进泵；水洞噪声试验；声纹特征；信号处理；循环平稳；特征提取
-%\cleardoublepage
-%\chapternonum{Abstract}
+\cleardoublepage
+\chapternonum{Abstract}
+As the basic premise of vibration and noise reduction and low noise design of the propulsion pump, it is of great significance to fully reveal the key influencing factors and formation mechanism of the radiated noise of the propulsion pump. Among the noise radiated by the propulsion pump, the linear spectral noise has a strong identification degree and a high contribution to the overall noise, which can characterize the working state and structure information of the propeller to some extent, and is the focus of the research on the noise radiated by the propulsion pump. In the propulsion pump, the mechanism of linear noise is more complex because of the interaction between guide vane, impeller and other components. Moreover, in some environments, the low SNR makes it relatively difficult to identify and extract the line spectrum noise, which brings difficulty to the analysis of the propulsion pump noise mechanism.
+
+This paper focuses on the acoustic fingerprint characteristics and line spectrum extraction method of the propulsion pump. Taking a pre-guide vane propulsion pump and a two-stage propulsion pump as the objects, the extraction method of the characteristic line spectrum noise of the propulsion pump, the main acoustic fingerprint characteristics and the characteristic line spectrum noise model of the propulsion pump under the condition of low signal-to-noise ratio (SNR) are mainly studied. The specific contents are as follows:
+
+(1) Propulsion pump noise testing and analysis system design based on LabVIEW. It covers the hardware design of sensors and data acquisition, as well as the design of software modules such as signal analysis, display and storage. The system supports simultaneous real-time acquisition of multi-channel sensor signals, and simultaneously analysis, display and storage of signals from each channel. It has the advantages of simple operation, high economy and efficiency. Based on the signal analysis module of the system, the voice print characteristics of the noise, such as the energy distribution characteristics of the frequency band, the total sound pressure level of the characteristic frequency band, and the spectrum characteristics, can be analyzed.
+
+(2) Radiated noise measurement and acoustic fingerprint analysis of single-stage and double-stage propulsion pumps based on the cavitation cylinder test platform. On the basis of considering the influence of background noise, the variation law of acoustic fingerprint characteristics of the pump noise under different working conditions was studied, and the correlation between the characteristic parameters of working conditions and the main characteristics of noise was studied. The results show that the noise energy of the propulsion pump is mainly concentrated in the middle and low frequency band. The sound pressure level of each characteristic frequency band of noise increases with the flow velocity, and the influence of the change of flow velocity on the noise energy distribution and the total sound pressure level of the propulsion pump is mainly reflected in the middle and low frequencies.
+
+(3) Model analysis of the noise signal of the propulsion pump was carried out based on the noise test data of the propulsion pump. Combined with the mechanism of noise signal and the characteristics of noise signal, the component analysis of noise signal is carried out. Propulsion pump noise signal components mainly include deterministic signal component, modulated signal component and environmental noise signal component. Based on the cyclostationary characteristics of the noise signal of the propulsion pump and the characteristics of each component, the first order and second order cyclostationary statistics are introduced, which provide the basis for the preprocessing of noise signal and the demodulation algorithm of modulated signal. The amplitude modulated signal model is established for the non-cavitation noise signal under constant speed operation condition, and the simulation model of noise signal is studied by using cyclostationary analysis method. The effectiveness and good anti-noise performance of the cyclostationary demodulation algorithm in extracting multi-component modulation frequency are verified.
+
+(4) Propulsion pump noise feature line spectrum extraction based on second-order cyclostationary analysis algorithm. Firstly, the second order cyclostationary analysis algorithm was used to extract the characteristic line spectrum of the two kinds of pump noises, and the low-frequency line spectrum components, such as shaft frequency, blade frequency and harmonic frequency, were extracted. In order to verify this feature analysis extraction method, the pulse dynamic characteristics of the propulsion pump were obtained by CFD numerical simulation, and it was found that the low-frequency line spectrum extracted by the cyclostationary analysis method could correspond to the characteristic line spectrum of the unsteady pulse force. Based on the results of feature extraction, the modulation relationship in the noise of propelling pump is studied. It is found that the noise of propelling pump has strong modulation characteristics, in which the shaft frequency and rotor blade frequency are the main modulation frequencies. With the increase of flow velocity, the modulation contribution of rotor blade frequency will increase obviously.
+
+
+\quad
+
+Key words: propulsion pump; Water tunnel noise test; Acoustic fingerprint characteristics; Signal processing; Cyclically stable; Feature extraction
