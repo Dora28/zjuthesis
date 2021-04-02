@@ -60,7 +60,7 @@
 有重要的理论和工程意义。
 \end{comment}
 
-基于以上背景，本文围绕推进泵噪声的声纹特征分析和特征线谱识别展开研究。
+基于以上背景，本文以推进泵的声纹特征及线谱提取方法为中心展开研究。
 首先，从推进泵的噪声试验研究出发，本文基于LabVIEW平台开发了推进泵噪声测试与分析系统，
 实现了推进泵噪声的测量和实时分析，为推进泵噪声的声纹特征分析奠定了研究基础。 
 其次，以紧凑型前置导叶的单级推进泵和新型结构的双级推进泵为研究对象，
@@ -260,7 +260,7 @@ Rajan等\cite{rajanCyclostationarityBasedSonar2016}分析了螺旋桨噪声的�
 在考虑背景噪声影响的基础上，研究不同工况下
 推进泵噪声的声纹特征变化，以及流速等与噪声的声学关联性，探讨推进泵噪声的声纹特征。
 
-第四章，开展了推进泵噪声信号的特性研究。基于推进泵噪声信号的特点，对噪声信号进行了组分分析、循环平稳特性、调制模
+第四章，开展了推进泵噪声信号的模型分析。基于推进泵噪声信号的特点，对噪声信号进行了组分分析、循环平稳特性、调制模
 型的研究。首先，结合推进泵噪声信号产生的机理，将推进泵噪声信号分量分为确定性信号分量、
 调制信号分量和噪声信号分量，并对各分量的统计
 特征进行分析研究；其次，基于推进泵噪声信号的循环平稳特性，对一阶循环平稳统计量和
@@ -668,18 +668,17 @@ LabVIEW中的数据类型与MATLAB中的数据类型相匹配，才能够进行�
     \includegraphics[scale=1]{3背景噪声的倍频程图.png}
     \caption{\label{fig:otcbeijing}水洞背景噪声1/3倍频程分析}
 \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=1]{3背景总声压级1.png}
+    \caption{\label{fig:beijingtotal}水洞背景噪声在不同水速下各个频段的噪声总声压级}
+\end{figure}
 
 如\autoref{fig:otcbeijing}所示为水洞不同流速下的背景噪声1/3倍频程图，
 可表征频域能量分布。
 可以看出水洞背景噪声能量在中低频段分布上有明显波动。
 高频段能量分布曲线平坦，单位频域下分布几近相同的能量密度。
 随着水速的增大，背景噪声各频段上的能量分布变化不大。
-
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[scale=1]{3背景总声压级1.png}
-    \caption{\label{fig:beijingtotal}水洞背景噪声在不同水速下各个频段的噪声总声压级}
-\end{figure}
 
 如\autoref{fig:beijingtotal}所示为水洞背景噪声在不同流速下各个频段的总声压级。
 从图中可以看出，随着流速的提升，高频段（1\,kHz -10 \,kHz）的声压级几乎没有发生变化。
@@ -688,16 +687,15 @@ LabVIEW中的数据类型与MATLAB中的数据类型相匹配，才能够进行�
 中频段（100\,Hz-1\,kHz）、中低频段（10\,Hz-1\,kHz）和全频段（10 \,Hz-10\,kHz）的变化曲线几乎重合，并且曲线随流速增大单调递增。
 这说明中频段（100\,Hz-1\,kHz）噪声是背景噪声最主要的贡献量，流速的增大会提升中频段（100\,Hz-1\,kHz）的噪声能量，
 进而增强背景噪声的总能量。
-
-如\autoref{fig:beijingfft}所示为水洞在水速为4.5\,m/s工况下的背景噪声频谱图，
-频谱在中低频段有连续的线谱成分，线谱幅值量级明显高于宽带谱，从而造成中低频段的能量波动。
-其中100\,Hz和300\,Hz线谱最为突出，为电磁干扰频率。结合三分之一倍频程图，可以看出电磁干扰频率及其附近频率成分影响了频谱的能量分布。
-
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1]{3背景噪声频谱.png}
     \caption{\label{fig:beijingfft}v=4.5\,m/s工况下水洞背景噪声频谱}
 \end{figure}
+
+如\autoref{fig:beijingfft}所示为水洞在水速为4.5\,m/s工况下的背景噪声频谱图，
+频谱在中低频段有连续的线谱成分，线谱幅值量级明显高于宽带谱，从而造成中低频段的能量波动。
+其中100\,Hz和300\,Hz线谱最为突出，为电磁干扰频率。结合三分之一倍频程图，可以看出电磁干扰频率及其附近频率成分影响了频谱的能量分布。
 
 以上分析表明，背景噪声的频谱呈现出中低频段宽带和线谱交叠的形貌，其中100\,Hz和300\,Hz电磁干扰线谱成分显著突出。
 背景噪声的能量主要集中在中低频段，中低频段的线谱是背景噪声能量的主要贡献者。
@@ -719,17 +717,16 @@ LabVIEW中的数据类型与MATLAB中的数据类型相匹配，才能够进行�
     \includegraphics[scale=1.0]{3导叶作用方式.png}
     \caption{\label{fig:daoye}导叶作用方式}
 \end{figure}
+
 叶轮的设计主要考虑了以下几个方面：（1）将定转子间距增大为0.2倍轮缘直径来减小定转子之间干涉；
 （2）通过缩短叶顶长度进一步减小叶轮顶部的载荷，来减小叶顶泄漏带来的效率损失，提升推进器总体能效水平；
 （3）将叶轮剖面翼型的最大厚度后移到40\%弦长处，优化吸力面压力分布，延迟空化的发生。
-推进泵设计模型如\autoref{fig:dj_design}所示。
+推进泵设计模型如\autoref{fig:dj_design}所示。推进泵的设计参数如\autoref{tab:dj}所示。
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=1.0]{3单级整体结构.png}
     \caption{\label{fig:dj_design}单级推进泵设计模型}
 \end{figure}
-
-推进泵的设计参数如\autoref{tab:dj}所示。
 \begin{table}[htbp]
     \centering
     \caption{\label{tab:dj}单级推进泵设计参数}
@@ -752,6 +749,7 @@ LabVIEW中的数据类型与MATLAB中的数据类型相匹配，才能够进行�
      \bottomrule
     \end{tabular}
 \end{table}
+
 推进泵试验模型的叶轮采用铝合金加工制造，表面做阳极化处理。导管选用有机玻璃材质，便于观察其特性。
 单级推进泵试验模型如\autoref{fig:dj_test}所示。
 \begin{figure}[htbp]
@@ -1115,20 +1113,6 @@ $\eta _{0}$表示效率。
     \includegraphics[scale=0.95]{3sj倍频程6.png}
     \caption{\label{fig:sjotc4}双级推进泵噪声1/3倍频程分析（4号传感器）}
 \end{figure}
-
-如\autoref{fig:sjotc1}，\autoref{fig:sjotc2}，\autoref{fig:sjotc3}，\autoref{fig:sjotc4}所示，
-分别为双级推进泵在不同进速系数工况下，不同测点噪声信号的三分之一倍频程图。
-与\autoref{fig:otcbeijing}背景噪声的三分之一倍频程图相比，
-双级推进泵噪声的声压级幅值量级在中低频段有整体性的显著提升，其噪声能量在频域上没有突出的上下波动，
-噪声能量分散到更宽的频带上。
-
-在噪声能量分布方面，推进泵噪声能量波动主要发生在1\,kHz以内的中低频段，高频段能量分布曲线平坦。
-可以看出噪声能量主要集中在中低频段。
-在中低频段，推进泵噪声能量分布表现出先稳步增长，后逐步下降的趋势，其噪声频谱具有更好的平稳性。
-随着推进系数的增大，即流速的变大，几乎中低频段的各个频段声压级幅值也在提升。
-这说明流速对中低频段能量的影响体现在中低频整个频段上。
-随着流速的增大，高频段的曲线变化趋势不显著，说明流速变化对高频段的能量分布影响较小。
-
 \subsubsection{双级推进泵噪声特征频段分析}
 \begin{figure}[htbp]
     \centering
@@ -1653,6 +1637,7 @@ D为叶轮直径。计算域入口距离推进泵前缘5L，
 为了适应SST湍流模型，如\autoref{fig:djyplus}所示，使叶片表面y$^+$小于15，
 以得到合理的边界层计算结果。
 如\autoref{fig:djwangge}、\autoref{fig:djjisuanyuwangge}所示为单级推进泵网格和计算域网格。
+经过网格无关性验证后确定总网格量，各计算域网格数如\autoref{tab:djshuliang}所示。
 \begin{figure}[htbp]
     \centering
     \subfigure[单级推进泵表面网格]{
@@ -1673,7 +1658,6 @@ D为叶轮直径。计算域入口距离推进泵前缘5L，
     \includegraphics[scale=1.0]{5单级yplus.png}
     \caption{\label{fig:djyplus}单级推进泵表面y$^+$}
 \end{figure}
-经过网格无关性验证后确定总网格量，各计算域网格数如\autoref{tab:djshuliang}所示。
 \begin{table}[htbp]
     \centering
     \caption{\label{tab:djshuliang}单级推进泵各计算域网格数量}
